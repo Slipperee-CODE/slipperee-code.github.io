@@ -1,0 +1,95 @@
+h1 {
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: rgb(64, 64, 255);
+}
+
+#typing {
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    transform: translate(0, -100%);
+}
+
+.main-text {
+    text-align: left;
+}
+
+.centered {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+
+#icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.catamaran-bold {
+  font-family: "Catamaran", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+  text-shadow: 0 0px 30px rgb(97, 97, 97),
+  0 10px 30px rgb(0, 0, 0);
+}
+
+body {
+    background-color: #121212;
+}
+
+.icon{
+    width: 48px;
+    height: 48px;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+}
+
+.icon:hover {
+  transform:scale(1.1)
+}
+
+#copyTooltip {
+    position: fixed;
+    bottom: 0;
+    margin: 20px;
+    padding: 10px;
+    font-size: 40px;
+    opacity: 1;
+}
+
+.fade-out-animation {
+  animation: fadeOut .75s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+.tooltip-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+#me {
+    position: fixed;
+    filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+}
