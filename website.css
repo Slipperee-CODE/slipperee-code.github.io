@@ -124,34 +124,3 @@ body {
 .underlined {
   text-decoration: underline;
 }
-
-.projects-text{
-	position: relative;
-	top: 5vh;
-  left: 5vw;
-  text-align: left;
-  z-index: 1029;
-}
-
-.project-window{
-  width: 100vw;
-  height: 90vh;
-}
-
-.project1{
-  margin-top: 5vh;
-  background-color: aqua;
-}
-
-.project2{
-  background-color: rgb(191, 0, 255);
-}
-
-.project3{
-  background-color: rgb(204, 255, 0);
-}
-
-.project-title-text{
-  font-size: 5vh;
-  margin-left: 5vw;
-}
