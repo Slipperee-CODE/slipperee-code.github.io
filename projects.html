@@ -12,27 +12,37 @@
 </head>
 <body>
     <nav class="header-navbar">
-        <a class="catamaran-bold zoom-animation underlined" href="index.html">home</a>
-        <a class="catamaran-bold zoom-animation not-underlined" href="projects.html">projects</a>
+        <a class="catamaran-bold zoom-animation not-underlined" href="index.html">home</a>
+        <a class="catamaran-bold zoom-animation underlined" href="projects.html">projects</a>
         <a class="catamaran-bold zoom-animation not-underlined" href="resume.pdf">resume</a>
     </nav>
 
-    <!--<img id="me" src="images/me-removebg-preview.png" style="height: 100vh;">-->
-
-    <div class="centered">
-        <div class="main-text">        
-            <h1 class="catamaran-bold">Cai Scheidler</h1>
-            <h2 id="typing" class="catamaran-bold"><span class="auto-type"></span></h1>
-        </div>
-
-        <div id="icon-container">
-            <a href="https://github.com/Slipperee-CODE"><img class="icon zoom-animation" src="images/github.svg"/></a>
-            <a href="https://www.linkedin.com/in/micaiah-scheidler-90a121304/"><img class="icon zoom-animation" src="images/linkedin.svg"/></a>
-            <a href="https://www.youtube.com/@slipperee_slime"><img class="icon zoom-animation" src="images/youtube.svg"/></a>
-            <input onclick="copyTextAndShowTooltip('slipperee_slime')" type="image" class="icon zoom-animation" src="images/discord.svg"/>
-            <input onclick="copyTextAndShowTooltip('scheidlercai@gmail.com')" type="image" class="icon zoom-animation" src="images/email.svg" />
-        </div>
+    <div class="projects-text">
+        <h1 class="catamaran-bold">projects</h1>
+        <h2 id="typing" class="catamaran-bold"><span class="auto-type"></span></h1>
     </div>
+
+
+    
+    <a id="project1"></a>
+    <br>
+    <div class="project-window project1">
+        <h2 class="project-title-text catamaran-bold">project 1</h2>
+    </div>
+    
+    <a id="project2"></a>
+    <br>
+    <div class="project-window project2">
+        <h2 class="project-title-text catamaran-bold">project 2</h2>
+    </div>
+
+    <a id="project3"></a>
+    <br>
+    <div class="project-window project3">
+        <h2 class="project-title-text catamaran-bold">project 3</h2>
+    </div>
+
+
 
     <div class="tooltip-container">
         <h3 id="copyTooltip" class="catamaran-bold" style="display: none;">Copied!</h3>
@@ -41,7 +51,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".auto-type", {
-            strings: ["an aspiring <a href='https://www.google.com/search?q=mechatronics+engineering&rlz=1C1VDKB_enUS1104US1104&oq=mechatronics+engineering&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIKCAEQABixAxiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDINCAkQLhivARjHARiABNIBCDM3NzVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8'>mechatronics</a> engineer", "a UC Berkeley EECS student", "is currently making a 1 pound combat robot"],
+            strings: ["An <a href='#project1'>aqua project</a>", "A <a href='#project2'>pink project</a>", "A <a href='#project3'>yellow project</a>"],
             typeSpeed: 75,
             backSpeed: 35,
             loop: true

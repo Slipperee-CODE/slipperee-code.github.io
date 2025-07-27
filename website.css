@@ -47,17 +47,23 @@ a {
 
 body {
     background-color: #121212;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .icon{
-    width: 48px;
-    height: 48px;
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
+  width: 48px;
+  height: 48px;
   filter: drop-shadow(0 0 10px rgb(255, 255, 255));
 }
 
-.icon:hover {
+.zoom-animation{
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-animation:hover{
   transform:scale(1.1)
 }
 
@@ -92,4 +98,60 @@ body {
 #me {
     position: fixed;
     filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+}
+
+.header-navbar{
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1030; /* to prevent the navbar getting covered up by other content */
+}
+
+.header-navbar a {
+  font-size: 40px;
+}
+
+.not-underlined {
+  text-decoration: none;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.projects-text{
+	position: relative;
+	top: 5vh;
+  left: 5vw;
+  text-align: left;
+  z-index: 1029;
+}
+
+.project-window{
+  width: 100vw;
+  height: 90vh;
+}
+
+.project1{
+  margin-top: 5vh;
+  background-color: aqua;
+}
+
+.project2{
+  background-color: rgb(191, 0, 255);
+}
+
+.project3{
+  background-color: rgb(204, 255, 0);
+}
+
+.project-title-text{
+  font-size: 5vh;
+  margin-left: 5vw;
 }
