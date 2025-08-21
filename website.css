@@ -1,8 +1,42 @@
 h1 {
-    font-size: 100px;
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-navbar a {
+  font-size: 40px;
+}
+
+.icon{
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+}
+
+@media screen and (max-width: 780px) {
+
+  h1 {
+    font-size: 50px;
     margin: 0;
     padding: 0;
+  }
+
+  h2 {
+      display: none;
+  }
+
+  .header-navbar a {
+    font-size: 20px;
+  }
+
+  .icon{
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+  }
 }
+
 
 a {
     color: rgb(64, 64, 255);
@@ -18,6 +52,8 @@ a {
 
 .main-text {
     text-align: left;
+    margin: auto;
+    min-height: fit-content;
 }
 
 .centered {
@@ -50,12 +86,6 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-}
-
-.icon{
-  width: 48px;
-  height: 48px;
-  filter: drop-shadow(0 0 10px rgb(255, 255, 255));
 }
 
 .zoom-animation{
@@ -113,9 +143,7 @@ body {
   z-index: 1030; /* to prevent the navbar getting covered up by other content */
 }
 
-.header-navbar a {
-  font-size: 40px;
-}
+
 
 .not-underlined {
   text-decoration: none;
