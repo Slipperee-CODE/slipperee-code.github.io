@@ -33,6 +33,9 @@
 .project-window{
   width: 100vw;
   min-height: 700px;
+  border: 10px; 
+  border-radius: 10px;
+  border-color: aliceblue;
 }
 
 .project-title-text{
