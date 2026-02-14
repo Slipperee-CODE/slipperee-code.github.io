@@ -1,0 +1,28 @@
+.main {
+    height: 85vh;
+    width: calc(height - 20vh);
+
+    border-style: solid;
+    border-width: 1rem;
+    border-color: whitesmoke;
+}
+
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  height: 100vh;          /* Optional: makes the container fill the viewport height */
+  /* Add any other container styles (e.g., background color) */
+}
+
+.white-rectangle {
+  background-color: white;
+  width: 300px;  /* Example width */
+  height: 200px; /* Example height */
+  /* Add borders, padding, etc. as needed */
+}
