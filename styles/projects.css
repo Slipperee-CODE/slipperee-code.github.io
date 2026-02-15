@@ -41,6 +41,16 @@
     line-height: 1.4;
 }
 
+.project_page p a{ 
+    color: rgb(64, 134, 255);
+    text-decoration: none;
+}
+
+.project_page p a:visited{ 
+    color: rgb(64, 134, 255);
+    text-decoration: none;
+}
+
 .project_images {
     display: flex;
     justify-content: center;
