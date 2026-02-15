@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  /* outline: 1px solid red; */
+}
+
+html {    
+  height: 100%;
+  background-color: #121212;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+
+  color: white;
+
+  text-shadow: 0 0px 30px rgb(97, 97, 97), 0 10px 30px rgb(0, 0, 0);
+}
+
+.font_size_small {
+  font-size: min(1.5rem, 3vw);
+  font-weight: bold;
+}
+
+.font_size_medium {
+  font-size: min(2.5rem, 5vw);
+  font-weight: bold;
+}
+
+.font_size_medium_large {
+  font-size: min(5rem, 7.5vw);
+  font-weight: bold
+}
+
+.font_size_large {
+  font-size: min(7rem, 10vw);
+  font-weight: 800;
+}
+
+.center_center_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.auto-type a {
+  color: rgb(64, 134, 255);
+  text-decoration: none;
+}
+
+.auto-type a:visited {
+  color: rgb(64, 134, 255);
+  text-decoration: none;
+}
+
+#navbar {
+  min-height: 2rem;
+  max-height: 3rem;
+
+  position: sticky;
+  top: 0;
+
+  background-color: #121212;
+  z-index: 1000;
+}
+
+#navbar ul.inline_list li a:link {
+  color: white;
+  text-decoration: none;
+}
+
+#navbar ul.inline_list li a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+ul.inline_list {
+  width: 85%;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul.inline_list li {
+  display: inline;
+
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.inline_list li:hover {
+  transform:scale(1.1)
+}
