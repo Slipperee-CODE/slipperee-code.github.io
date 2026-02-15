@@ -1,19 +1,135 @@
-body {    
+* {
+  margin: 0;
+  padding: 0;
+
+  /* outline: 1px solid red; */
+}
+
+html {    
+  height: 100%;
   overflow: hidden;
-  background-color: black;
+  background-color: #121212;
 }
 
-.container {
+body {
+  font-family: "Catamaran", sans-serif;
+
+  color: white;
+
+  text-shadow: 0 0px 30px rgb(97, 97, 97), 0 10px 30px rgb(0, 0, 0);
+}
+
+.font_size_small {
+  font-size: max(1rem, 1.25vw);
+  font-weight: bold;
+}
+
+.font_size_medium {
+  font-size: min(1.75rem, 5vw);
+  font-weight: bold;
+}
+
+.font_size_large {
+  font-size: min(4rem, 10vw);
+  font-weight: 800;
+}
+
+.center_center_items {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;    /* Centers vertically */
-  height: 100vh;          /* Optional: makes the container fill the viewport height */
-  /* Add any other container styles (e.g., background color) */
+  justify-content: center;
+  align-items: center;
 }
 
-.white-rectangle {
-  background-color: white;
-  width: 30rem;  /* Example width */
-  height: 20rem; /* Example height */
-  /* Add borders, padding, etc. as needed */
+.underlined {
+  text-decoration: underline;
+}
+
+#typing a {
+  color: rgb(64, 134, 255);
+  text-decoration: none;
+}
+
+#typing a:visited {
+  color: rgb(64, 134, 255);
+  text-decoration: none;
+}
+
+#navbar {
+  min-height: 2rem;
+  max-height: 3rem;
+
+  /* background-color: rgb(245, 179, 179); */
+}
+
+#navbar ul.inline_list li a:link {
+  color: white;
+  text-decoration: none;
+}
+
+#navbar ul.inline_list li a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#name_and_links {
+  width: 100vw;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#name {
+  min-height: 5em;
+
+  padding-left: 10vw;
+  padding-bottom: 1.5vw;
+
+  /* background-color: rgb(179, 245, 185); */
+}
+
+#name h1{
+  line-height: 0.9;
+}
+
+#name h3{
+  position: relative;
+
+  padding-left: 0.5vw;
+}
+
+#links {
+  min-height: 2rem;
+  max-height: 3rem;
+
+  /* background-color: rgb(185, 179, 245); */
+}
+
+ul.inline_list {
+  width: 85%;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul.inline_list li {
+  display: inline;
+
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.inline_list li:hover {
+  transform:scale(1.1)
+}
+
+#links ul.inline_list li a:link {
+  color: rgb(64, 134, 255);
+  text-decoration: none;
+}
+
+#links ul.inline_list li a:visited {
+  color: rgb(64, 134, 255);
+  text-decoration: none;
 }
