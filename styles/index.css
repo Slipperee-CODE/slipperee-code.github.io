@@ -4,17 +4,18 @@ html {
 
 /* fix this lol */
 #background img { 
-  width: min(40vw, 20rem);
-
   position: absolute;
+
+  width: min(40vw, 30rem);
+  
+  top: 10rem;
+  left: 1rem;
+
   z-index: -1;
 
-  top: 12rem;
-  left: 10rem;
+  /* filter: brightness(75%); */
 
-  filter: brightness(75%);
-
-  /* filter: drop-shadow(0 0 20px rgb(255, 255, 255)); */
+  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
 }
 
 #name_and_links {
