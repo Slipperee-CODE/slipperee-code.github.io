@@ -59,6 +59,7 @@ body {
 }
 
 #navbar {
+  padding: 1rem;
   min-height: 2rem;
   max-height: 3rem;
 
