@@ -5,6 +5,7 @@
 .project_header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .project_page {
@@ -51,6 +52,16 @@
     text-decoration: none;
 }
 
+.project_side_by_side {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project_side_by_side p {
+    width: min(40rem, 40vw);
+}
+
 .project_images {
     display: flex;
     justify-content: center;
@@ -60,5 +71,11 @@
 .project_images img { 
     max-width: 20rem;
     max-height: 20rem;
+    padding: 0.75rem;
+}
+
+.project_images video { 
+    max-width: min(40rem, 30vw);
+    max-height: 40rem;
     padding: 0.75rem;
 }
