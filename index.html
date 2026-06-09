@@ -3,65 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Cai Scheidler Home</title>
+    <meta name="description" content="Wonderful homepage of Cai Scheidler a.k.a. Slipperee-CODE's portfolio website">
+    <title>Cai's Portfolio</title>
 </head>
 <body>
-    <div id="navbar" class="font_size_medium center_center_items">
-        <ul class="inline_list">
-            <li class="underlined"><a href="index.html">home</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a id="resume" href="resources/resume.pdf">resume</a></li>
-        </ul>
-    </div>
-
-    <div id="name_and_links">
-        <div id="name">
-            <h1 class="font_size_large"> Cai Scheidler </h1>
-            <h3 class="font_size_small"> <span class="auto-type"></span> </h3>
-        </div>
-
-        <div id="links" class="font_size_medium center_center_items">
-            <ul class="inline_list">
-                <li><a href="" onclick="copyEmail()">email</a></li>
-                <li><a href="https://github.com/Slipperee-CODE">github</a></li>
-                <li><a href="https://www.linkedin.com/in/caischeidler/">linkedin</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- <div id="background"> <img src="resources/backgrounds/wizard-removebg-preview.png"> </div> -->
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: [
-            "an aspiring <a href='https://www.google.com/search?q=mechatronics+engineering&rlz=1C1VDKB_enUS1104US1104&oq=mechatronics+engineering&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIKCAEQABixAxiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDINCAkQLhivARjHARiABNIBCDM3NzVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8'>mechatronics</a> engineer", 
-            "a UC Berkeley EECS student", 
-            "is working to improve a 1 pound melty brain combat robot",
-            "is developing a 3 pound melty brain combat robot",
-            "makes STEM parody songs",
-            ],
-            typeSpeed: 75,
-            backSpeed: 35,
-            loop: true
-        })
-    </script>
+    <canvas id="canvas" width="500" height="400"></canvas>
 
     <script>
-        function copyEmail() {
-            var textContent = "scheidlercai@gmail.com"
-            
-            navigator.clipboard.writeText(textContent).then(() => {
-                alert("Email copied!");
-            }).catch(err => {
-                console.error('Copy failed: ', err);
-            });
-        }
+        // Target the canvas element
+        const canvas = document.getElementById('canvas');
+
+        // Get the 2D rendering context
+        const ctx = canvas.getContext('2d');
+
+        // Draw a solid blue rectangle (X, Y, Width, Height)
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(50, 50, 150, 100);
+
+        // Draw an outlined red circle
+        ctx.beginPath();
+        ctx.arc(300, 100, 40, 0, Math.PI * 2); // X, Y, Radius, Start Angle, End Angle
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 5;
+        ctx.stroke();
     </script>
 </body>
 </html>
