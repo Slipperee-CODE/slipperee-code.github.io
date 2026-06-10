@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Scroll Demo</title>
+  <style>
+    .track {
+      overflow: hidden;
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .belt {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 4s linear infinite;
+    }
+
+    .belt-half {
+      display: flex;
+      gap: 40px;
+      padding-right: 40px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: red;
+      border: 3px solid black;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="track">
+    <div class="belt">
+      <!-- original -->
+      <div class="belt-half">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <!-- duplicate -->
+      <div class="belt-half" aria-hidden="true">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

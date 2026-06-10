@@ -1,0 +1,44 @@
+html {
+    font-family: 'DM Sans';
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.ts1 {
+    animation: move 10s linear infinite;
+    animation-fill-mode: backwards; 
+    animation-delay: 5s;
+}
+
+.ts2 {
+    animation: move 10s linear infinite;
+    animation-fill-mode: backwards; 
+}
+
+.test-square {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    50% {
+       transform: translateX(100vw);
+    }
+
+    100% {
+       transform: translateX(100vw);
+    }
+}
