@@ -17,6 +17,8 @@ set of all elements starts aligned to the left of the screen*/
 /* apparently items can't be bigger than the screen width in pixels
 so putting the animation here as opposed to in .container-square just works
 bc this object is 100vw */
+
+/* might want to return the animation into .container-square in the future tho */
 .horiz-scrolling-list{
     margin: 0;
     padding: 0;
@@ -39,6 +41,13 @@ bc this object is 100vw */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    /* animation-name: scroll-right;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal; */
 }
 
 .square {
