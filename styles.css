@@ -8,21 +8,19 @@ body {
 }
 
 .ts1 {
-    animation: move 10s linear infinite;
+    animation: move 5s linear infinite normal;
     animation-fill-mode: backwards; 
-    animation-delay: 5s;
+    animation-delay: -.5s;
 }
 
 .ts2 {
-    animation: move 10s linear infinite;
+    animation: move 5s linear infinite normal;
     animation-fill-mode: backwards; 
 }
 
 .test-square {
-    position: absolute;
-
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
 
     display: flex;
     align-items: center;
@@ -31,13 +29,15 @@ body {
 
 @keyframes move {
     0% {
-        transform: translateX(-100px);
+        transform: translateX(calc(2*-2800px));
+    }
+    10% {
+        transform: translateX(calc(-2800px));
     }
 
-    50% {
+    99% {
        transform: translateX(100vw);
     }
-
     100% {
        transform: translateX(100vw);
     }
