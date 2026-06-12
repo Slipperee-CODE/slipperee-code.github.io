@@ -7,23 +7,32 @@ body {
     padding: 0;
 }
 
-/* Maybe do something in javascript that copies a div and pastes it as a 
-item to the list so you can easily add the same thing to a ul again then
-just start with right side on screen, scroll till left side fully onscreen, 
-restart loop so it's an exact match (start and end at same spot) 
-even if the list is longer than the screen it should be fine so long as the first 
-set of all elements starts aligned to the left of the screen*/
-
-/* apparently items can't be bigger than the screen width in pixels
-so putting the animation here as opposed to in .container-square just works
-bc this object is 100vw */
-
-/* might want to return the animation into .container-square in the future tho */
-.horiz-scrolling-list{
+.horiz-scroll-container {
     margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
+}
+
+.project {
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(0, 0, 0);
+    background-color: lightgreen;
+}
+
+.horiz-scroll {
+    height: 100px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
     animation-name: scroll-right;
     animation-duration: 10s;
@@ -33,31 +42,9 @@ bc this object is 100vw */
     animation-direction: normal;
 }
 
-.container-square {
-    width: 100vw;
-    height: 100px;
-    opacity: 0.5;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    /* animation-name: scroll-right;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-fill-mode: backwards;
-    animation-iteration-count: infinite;
-    animation-direction: normal; */
-}
-
-.square {
-    width: 100px;
-    height: 100px;
-}
-
 @keyframes scroll-right {
     0% {
-        transform: translateX(-200%);
+        transform: translateX(-100%);
     }
 
     100% {
@@ -68,17 +55,4 @@ bc this object is 100vw */
 .r {
     background-color: lightcoral;
 }
-
-.g {
-    background-color: lightgreen;
-}
-
-.b {
-    background-color: lightblue;
-}
-
-.p {
-    background-color: lightpink;
-}
-
 

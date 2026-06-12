@@ -12,9 +12,26 @@
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
 </head>
 <body>
-    <ul class="horiz-scrolling-list">
-        <li> <div class="container-square b"> </div> </li>
-        <li> <div class="container-square r"> </div> </li>
-        <li> <div class="container-square b"> </div> </li>
+    <ul id="project-container" class="horiz-scroll-container">
+        <li id="projects"> <div class="horiz-scroll r"> 
+            <div class="project"> <p>This is my 1st project!</p> </div> 
+            <div class="project"> <p>This is my 2nd project!</p> </div> 
+            <div class="project"> <p>This is my 3rd project!</p> </div> 
+            <div class="project"> <p>This is my 4th project!</p> </div> 
+            <div class="project"> <p>This is my 5th project!</p> </div> 
+            <div class="project"> <p>This is my 6th project!</p> </div> 
+            <div class="project"> <p>This is my 7th project!</p> </div> 
+            <div class="project"> <p>This is my 8th project!</p> </div> 
+        </div> </li>
+    </ul>
+
+    <script>
+        const projects_container = document.getElementById("project-container");
+        const projects = document.getElementById("projects");
+        projects_container.appendChild(projects.cloneNode(true));
+
+        // const experience = document.getElementById("experience");
+        // projects.appendChild(experience.firstChild.cloneNode(true));
+    </script>
 </body>
 </html>
