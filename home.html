@@ -13,8 +13,27 @@
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
 </head>
 <body>
+    <!-- 
+    Once you get basic ideas / layout done: 
+    - Cleanup your CSS and HTML + 
+    - Make website scale properly using **clamp**
+
+    Make name animate in funny ways that are randomly selected 
+     (i.e. ai gets highlighted then the word becomes sentient, hi gets highlighted and the words waves,
+     cheer gets highlighted gets highlighted and confetti falls from the top of the screen, 
+     Car gets highlighted and the name drives off, CS gets highlighted and it starts coding,
+     ee gets highlighted and something electronics happens), 
+     use tetris bag system for selecting the animation to come next (refill bag when all animations played),
+     all the above animations should be a part of classes .flip-to-black .ai-flip, .hi-flip, .car-flip, etc that get added to their appropriate words via js 
+     when the animation is selected. All letters should be in own <span></span> with unique id, use c1, a1, i1, s1, c2, etc. 
+
+     Letters should flip randomly in between specific animations (while randomly choosing from a list of existing colors) 
+     ^ should happen in js, probably make a separate .js/.ts file at this point
+
+     In this state, every random number of seconds (3-5sec) js should choose 1 letter to flip, (if it's already colored flip it back to black)
+     -->
     <div id="header">
-        <h1 id="name">Cai Scheidler</h1>
+        <h1 id="name"> <span style="animation-delay: 1s;">C</span><span class="diff">a</span>i <span class="diff" style="animation-delay: -1s;">S</span>cheid<span>l</span>er</h1>
         <div id="contact-info">
            <p> scheidlercai@gmail.com </p>
            <p> 626-739-8190 </p> 
