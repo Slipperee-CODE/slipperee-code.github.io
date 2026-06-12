@@ -1,5 +1,7 @@
 html {
     font-family: 'DM Sans';
+    background-color: #F2F0EF;
+    overflow-x: hidden;
 }
 
 body {
@@ -7,40 +9,57 @@ body {
     padding: 0;
 }
 
-#name {
-    font-size: 5rem;
-    margin: 1rem;
+#header {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
 }
 
-#buttons li {
-    width: 75vw;
+#name {
+    font-size: clamp(2rem, 4vw + 1rem, 5rem);
+    margin: 0;
+    margin-left: 1rem;
+}
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin: 1rem;
+
+}
+
+#contact-info p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#links {
+    margin: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
 
     display: flex;
     gap: 5rem;
+    list-style-type: none;
 }
 
-.button {
-    font-family: 'DM Sans';
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    border-radius: 1rem;
-    border-width: 0.25rem;
-
-    color: black;
+.link {
+    font-size: 1.5rem;
+    color: rgb(64, 134, 255);
+    text-decoration: none;
 }
 
-.gray {
-    background-color: lightslategray;
+.link:visited {
+    color: rgb(64, 134, 255);
+    text-decoration: none;
 }
 
-.blue {
-    background-color: lightblue;
+.section-title {
+    margin: 1rem;
 }
 
-.red {
-    background-color: lightcoral;
+.section-title a {
+    font-size: 2.5rem;
 }

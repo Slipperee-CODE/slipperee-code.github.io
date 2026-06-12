@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wonderful homepage of Cai Scheidler a.k.a. Slipperee-CODE's portfolio website">
+    <meta name="description" content="Wonderful homepage of Cai Scheidler's (a.k.a. Slipperee-CODE's) portfolio website">
     <title>Cai's Portfolio</title>
     <link rel="stylesheet" href="scrolling.css">
     <link rel="stylesheet" href="home.css">
@@ -13,22 +13,25 @@
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
 </head>
 <body>
-    <h1 id="name">Cai Scheidler</h1>
+    <div id="header">
+        <h1 id="name">Cai Scheidler</h1>
+        <div id="contact-info">
+           <p> scheidlercai@gmail.com </p>
+           <p> 626-739-8190 </p> 
+        </div>
+    </div>
 
-    <ul id="buttons">
-        <li>
-            <button class="button gray">github</button> <button class="button blue">linkedin</button> <button class="button red">youtube</button>
-        </li>
-        <li>
-            <button>hi</button> <button>hi</button> <button>hi</button>
-        </li>
-        <li>
-            <button>hi</button> <button>hi</button> <button>hi</button>
-        </li>
+    <ul id="links">
+        <li><a class="link" href="details.html">about me</a></li>
+        <li><a class="link" href="https://github.com/Slipperee-CODE">github</a></li>
+        <li><a class="link" href="https://www.linkedin.com/in/caischeidler/">linkedin</a></li>
+        <li><a class="link" href="https://devpost.com/Slipperee-CODE">devpost</a></li>
+        <li><a class="link" href="resume.pdf">resume</a></li>
     </ul>
 
+    <h1 class="section-title"> <a class="link" href="details.html#project-container"> Projects </a> </h1>
     <ul id="project-container" class="horiz-scroll-container">
-        <li id="projects"> <div class="horiz-scroll r"> 
+        <li id="projects"> <div class="horiz-scroll"> 
             <div class="project"> <p>This is my 1st project!</p> </div> 
             <div class="project"> <p>This is my 2nd project!</p> </div> 
             <div class="project"> <p>This is my 3rd project!</p> </div> 
@@ -40,13 +43,28 @@
         </div> </li>
     </ul>
 
+    <h1 class="section-title"> <a class="link" href="details.html#experience-container"> Experience </a> </h1>
+    <ul id="experience-container" class="horiz-scroll-container">
+        <li id="experience"> <div class="horiz-scroll"> 
+            <div class="project"> <p>This is my 1st experience!</p> </div> 
+            <div class="project"> <p>This is my 2nd experience!</p> </div> 
+            <div class="project"> <p>This is my 3rd experience!</p> </div> 
+            <div class="project"> <p>This is my 4th experience!</p> </div> 
+            <div class="project"> <p>This is my 5th experience!</p> </div> 
+            <div class="project"> <p>This is my 6th experience!</p> </div> 
+            <div class="project"> <p>This is my 7th experience!</p> </div> 
+            <div class="project"> <p>This is my 8th experience!</p> </div> 
+        </div> </li>
+    </ul>
+
     <script>
         const projects_container = document.getElementById("project-container");
         const projects = document.getElementById("projects");
         projects_container.appendChild(projects.cloneNode(true));
 
-        // const experience = document.getElementById("experience");
-        // projects.appendChild(experience.firstChild.cloneNode(true));
+        const experience_container = document.getElementById("experience-container");
+        const experience = document.getElementById("experience");
+        experience_container.appendChild(experience.cloneNode(true));
     </script>
 </body>
 </html>
