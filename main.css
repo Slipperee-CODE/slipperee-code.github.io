@@ -1,0 +1,175 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e1e;
+    overflow-x: hidden;
+}
+
+.centered-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#everything {
+    width: clamp(30rem, 60vw + 1rem, 100rem);
+    margin:auto;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.underlined {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.links {
+    justify-content: space-between;
+    margin: 0.5rem
+}
+
+.gallery {
+    /* something probably needs to be here to fix gallery sliding */
+}
+
+.slide-right {
+    justify-content: space-around;
+    
+    animation: slide-right 25s linear normal infinite backwards;    
+}
+
+.slide-left {
+    justify-content: space-around;
+    
+    animation: slide-right 20s linear reverse infinite backwards;    
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }   
+}
+
+.image-collection {
+    width: 300px;
+    height: 300px;
+
+    margin: 10px;
+
+    background-color: #DF2935;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-collection:hover {
+    transform: scale(1.025);
+}
+
+.image-collection h2 {
+    margin: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.image-collection:hover h2 {
+    opacity: 1;
+}
+
+.projects h1 {
+    margin-bottom: 1rem;
+}
+
+.project-header {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.project-title:target {
+    background-color: #d9b26f56;
+}
+
+.gray {
+    color: #6e6e6e;
+}
+
+.gold {
+    color: #D9B26F;
+}
+
+button, h1, h2, h3, p { 
+    font-family: 'DM Sans';
+    color: #FFFFFF;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem; 
+}
+
+h2 {
+    font-size: 1.25rem; 
+}
+
+h3 {
+    font-size: 1rem; 
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+a {
+    color: #4086ff
+}
+
+button {
+    background-color: #167D35;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0C451D;
+}
+
+#github-button {
+    background-color: #685D6F;
+}
+
+#github-button:hover {
+    background-color: #3E3843;
+}
+
+#linkedin-button {
+    background-color: #3F84E5;
+}
+
+#linkedin-button:hover {
+    background-color: #1B62C5;
+}
+
+#youtube-button {
+    background-color: #DF2935;
+}
+
+#youtube-button:hover {
+    background-color: #A01821;
+}

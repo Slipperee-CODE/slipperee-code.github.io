@@ -12,6 +12,12 @@
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-duration: 25s;
+
+    z-index: 1;
+}
+
+#projects:hover {
+    z-index: 999;
 }
 
 #experience {
@@ -34,6 +40,12 @@
 
     color: rgb(0, 0, 0);
     background-color: lightgreen;
+    box-shadow: 10px 15px 20px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.2);
 }
 
 .horiz-scroll {
