@@ -13,7 +13,7 @@ body {
     align-items: center;
 }
 
-#everything {
+.centered {
     width: clamp(30rem, 60vw + 1rem, 100rem);
     margin:auto;
 }
@@ -112,16 +112,21 @@ body {
     justify-content: space-between;
 }
 
-.project-title:target {
+.project-header {
+    background-color: #ffffff00;
+    transition: transform 0.2s ease;
+}
+
+.project-header:hover {
+    background-color: #78d96f56;
+}
+
+.project-header:target {
     background-color: #d9b26f56;
 }
 
 .gray {
     color: #6e6e6e;
-}
-
-.light-gold-highlight {
-    color: #b8a17856;;
 }
 
 .gold {

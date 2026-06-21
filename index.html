@@ -14,7 +14,7 @@
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
 </head>
 <body>
-    <div id="everything">
+    <div class="centered">
         <div id="header" class="underlined">
             <h1> Cai Scheidler </h1>
             <h2> scheidlercai@gmail.com </h2>
@@ -31,63 +31,63 @@
             <h1 class="underlined"> About Me </h1>
             <p> Hi! I'm Cai Scheidler, a something, something, and something! I do somethings sometimes but occasionally don't! </p>
         </div>
+    </div>
 
-        <div>
-            <h1 class="underlined"> Project Gallery </h1>
-            <div class="gallery duplicate-child centered-flex-row">
-                <div class="slide-right centered-flex-row">
-                    <div class="image-collection">
-                        <h2> Image Title #1 </h2>
-                        <!-- <a href="#combat-robotics"><img src="wizard_me.png"></a>      -->
-                    </div>
-                    <div class="image-collection">
-                        <h2> Image Title #2 </h2>
-                        <a href=""><img src=""></a>     
-                    </div>  
-                    <div class="image-collection">
-                        <h2> Image Title #3 </h2>
-                        <a href=""><img src=""></a>     
-                    </div>
-                    <div class="image-collection">
-                        <h2> Image Title #4 </h2>
-                        <a href=""><img src=""></a>     
-                    </div>
-                </div>  
-            </div>
-        </div>
-
-        <div>
-            <h1 class="underlined"> Experience Gallery </h1>
-            <div class="gallery duplicate-child centered-flex-row">
-                <div class="slide-left centered-flex-row">
-                    <div class="image-collection">
-                        <h2> Image Title #1 </h2>
-                        <!-- <a href="#theCoderSchool"><img src="wizard_me.png"></a>      -->
-                    </div>
-                    <div class="image-collection">
-                        <h2> Image Title #2 </h2>
-                        <a href=""><img src=""></a>     
-                    </div>  
-                    <div class="image-collection">
-                        <h2> Image Title #3 </h2>
-                        <a href=""><img src=""></a>     
-                    </div>
-                    <div class="image-collection">
-                        <h2> Image Title #4 </h2>
-                        <a href=""><img src=""></a>     
-                    </div>              
+    <h1 class="centered underlined"> Project Gallery </h1>
+    <div>
+        <div class="gallery duplicate-child centered-flex-row">
+            <div class="slide-right centered-flex-row">
+                <div class="image-collection">
+                    <h2> Image Title #1 </h2>
+                    <a href="#combat-robotics"><img src="wizard_me.png"></a>  
                 </div>
+                <div class="image-collection">
+                    <h2> Image Title #2 </h2>
+                    <a href=""><img src=""></a>     
+                </div>  
+                <div class="image-collection">
+                    <h2> Image Title #3 </h2>
+                    <a href=""><img src=""></a>     
+                </div>
+                <div class="image-collection">
+                    <h2> Image Title #4 </h2>
+                    <a href=""><img src=""></a>     
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <h1 class="centered underlined"> Experience Gallery </h1>
+    <div>
+        <div class="gallery duplicate-child centered-flex-row">
+            <div class="slide-left centered-flex-row">
+                <div class="image-collection">
+                    <h2> Image Title #1 </h2>
+                    <a href="#theCoderSchool"><img src="wizard_me.png"></a>     
+                </div>
+                <div class="image-collection">
+                    <h2> Image Title #2 </h2>
+                    <a href=""><img src=""></a>     
+                </div>  
+                <div class="image-collection">
+                    <h2> Image Title #3 </h2>
+                    <a href=""><img src=""></a>     
+                </div>
+                <div class="image-collection">
+                    <h2> Image Title #4 </h2>
+                    <a href=""><img src=""></a>     
+                </div>              
             </div>
         </div>
+    </div>
 
+    <div class="centered">
         <div class="projects">
             <h1 class="underlined"> Projects </h1>
-            <details class="project" name="projects">
-                <summary>
-                    <a class="project-header underlined" href="#combat-robotics"> 
-                        <h2 id="combat-robotics" class="project-title"> Combat Robotics & Donuts </h2>
-                        <h3 class="gray">Aug 2025 - <span class="gold">PRESENT</span></h3>
-                    </a>
+            <details class="project" name="dropdowns">
+                <summary id="combat-robotics" class="project-header underlined">
+                    <h2 class="project-title"> Combat Robotics & Donuts </h2>
+                    <h3 class="gray">Aug 2025 - <span class="gold">PRESENT</span></h3>
                 </summary>
                     
                 <div class="links centered-flex-row">
@@ -106,9 +106,9 @@
                 </p>
             </details>
 
-            <details class="project" name="projects">
-                <summary href="#not-combat-robotics" class="project-header underlined"> 
-                    <h2 id="not-combat-robotics" class="project-title"> Not Combat Robotics & Donuts </h2>
+            <details class="project" name="dropdowns">
+                <summary id="not-combat-robotics" class="project-header underlined"> 
+                    <h2 class="project-title"> Not Combat Robotics & Donuts </h2>
                     <h3 class="gray">Aug 2025 - <span class="gold">PRESENT</span></h3>
                 </summary>
                     
@@ -131,18 +131,21 @@
 
         <div class="projects">
             <h1 class="underlined"> Experience </h1>
-            <div class="project">
-                <div class="project-header underlined">
-                    <h2 id="theCoderSchool" class="project-title"> theCoderSchool Pasadena </h2>
+            <details class="project" name="dropdowns">
+                <summary id="theCoderSchool" class="project-header underlined"> 
+                    <h2 class="project-title"> theCoderSchool Pasadena </h2>
                     <h3 class="gray">Jul 2024 - Jul 2025</h3>
-                </div>
+                </summary>
+                    
                 <div class="links centered-flex-row">
-                    <button> Company's Website </button>
+                    <button> Company Website </button>
                 </div>
-                <p> This is this experience. This is a thorough explanation of what went on in this experience. </p>
-            </div>
+                
+                <p> This is this experience. This is a thorough explanation of what went on during this experience. 
+                    This is a <a href="">link</a>. What a cool set of sentences!
+                </p>
+            </details>
         </div>
-        
     </div>
 
     <script>
