@@ -34,10 +34,6 @@ body {
     margin: 0.5rem
 }
 
-.gallery {
-    /* something probably needs to be here to fix gallery sliding */
-}
-
 .slide-right {
     justify-content: space-around;
     
