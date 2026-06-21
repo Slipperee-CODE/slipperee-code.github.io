@@ -57,6 +57,8 @@ body {
 }
 
 .image-collection {
+    position: relative;
+
     width: 300px;
     height: 300px;
 
@@ -72,6 +74,7 @@ body {
 }
 
 .image-collection h2 {
+    position: absolute;
     margin: 0.5rem;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
