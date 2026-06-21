@@ -64,7 +64,7 @@ body {
 
     margin: 10px;
 
-    background-color: #DF2935;
+    /* background-color: #DF2935; */
 
     transition: transform 0.2s ease-in-out;
 }
