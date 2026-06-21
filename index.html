@@ -38,7 +38,7 @@
                 <div class="slide-right centered-flex-row">
                     <div class="image-collection">
                         <h2> Image Title #1 </h2>
-                        <a href="#combat-robotics"><img src="wizard_me.png"></a>     
+                        <!-- <a href="#combat-robotics"><img src="wizard_me.png"></a>      -->
                     </div>
                     <div class="image-collection">
                         <h2> Image Title #2 </h2>
@@ -62,7 +62,7 @@
                 <div class="slide-left centered-flex-row">
                     <div class="image-collection">
                         <h2> Image Title #1 </h2>
-                        <a href="#theCoderSchool"><img src="wizard_me.png"></a>     
+                        <!-- <a href="#theCoderSchool"><img src="wizard_me.png"></a>      -->
                     </div>
                     <div class="image-collection">
                         <h2> Image Title #2 </h2>
@@ -82,11 +82,14 @@
 
         <div class="projects">
             <h1 class="underlined"> Projects </h1>
-            <div class="project">
-                <div class="project-header underlined">
-                    <h2 id="combat-robotics" class="project-title"> Combat Robotics & Donuts </h2>
-                    <h3 class="gray">Aug 2025 - <span class="gold">PRESENT</span></h3>
-                </div>
+            <details class="project" name="projects">
+                <summary>
+                    <a class="project-header underlined" href="#combat-robotics"> 
+                        <h2 id="combat-robotics" class="project-title"> Combat Robotics & Donuts </h2>
+                        <h3 class="gray">Aug 2025 - <span class="gold">PRESENT</span></h3>
+                    </a>
+                </summary>
+                    
                 <div class="links centered-flex-row">
                     <button> CAD </button>
                     <button> PCB </button>
@@ -97,10 +100,33 @@
                     <button> CRB </button>
                     <button> Melty Discord </button>
                 </div>
+                
                 <p> This is this project. This is a thorough explanation of what went on in this project. 
                     This is a <a href="">link</a>. What a cool set of sentences!
                 </p>
-            </div>
+            </details>
+
+            <details class="project" name="projects">
+                <summary href="#not-combat-robotics" class="project-header underlined"> 
+                    <h2 id="not-combat-robotics" class="project-title"> Not Combat Robotics & Donuts </h2>
+                    <h3 class="gray">Aug 2025 - <span class="gold">PRESENT</span></h3>
+                </summary>
+                    
+                <div class="links centered-flex-row">
+                    <button> CAD </button>
+                    <button> PCB </button>
+                    <button> Code</button>
+                    <button> Fights </button>
+                    <button> Doom </button>
+                    <button> Despair </button>
+                    <button> CRB </button>
+                    <button> Melty Discord </button>
+                </div>
+                
+                <p> This is this project. This is a thorough explanation of what went on in this project. 
+                    This is a <a href="">link</a>. What a cool set of sentences!
+                </p>
+            </details>
         </div>
 
         <div class="projects">

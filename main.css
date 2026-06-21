@@ -85,8 +85,24 @@ body {
     opacity: 1;
 }
 
-.projects h1 {
-    margin-bottom: 1rem;
+.project {
+    margin: 1rem 0rem;
+}
+
+.project summary {
+    list-style-type: none;
+} 
+
+.project summary h2::before {
+  content: ">";
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.project[open] > summary h2::before {
+  transform: rotate(90deg);
 }
 
 .project-header {
@@ -104,11 +120,15 @@ body {
     color: #6e6e6e;
 }
 
+.light-gold-highlight {
+    color: #b8a17856;;
+}
+
 .gold {
     color: #D9B26F;
 }
 
-button, h1, h2, h3, p { 
+button, h1, h2, h3, p, .project summary h2::before { 
     font-family: 'DM Sans';
     color: #FFFFFF;
 }
