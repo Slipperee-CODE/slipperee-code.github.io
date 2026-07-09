@@ -25,13 +25,18 @@ body {
     justify-content: space-between;
 }
 
+#about-me-content {
+    margin-top: 0.5rem;
+    gap: 2rem;
+}
+
 .underlined {
     border-bottom: 1px solid #FFFFFF;
 }
 
 .links {
     justify-content: space-between;
-    margin: 0.5rem
+    margin: 0.5rem;
 }
 
 .slide-right {
@@ -154,6 +159,7 @@ h3 {
 }
 
 p {
+    font-size: 1.05rem;
     margin: 0.5rem 0;
 }
 
