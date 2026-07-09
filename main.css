@@ -129,6 +129,16 @@ body {
     background-color: #d9b26f56;
 }
 
+.video-100 {
+    max-width: 100%;
+    width: 100%;
+}
+
+.image-description {
+    color: #6e6e6e;
+    font-size: 1rem;
+}
+
 .gray {
     color: #6e6e6e;
 }
