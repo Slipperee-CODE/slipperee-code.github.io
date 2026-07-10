@@ -1,0 +1,67 @@
+html {
+  overflow: hidden;
+}
+
+/* fix this lol */
+#background img { 
+  position: absolute;
+
+  width: min(40vw, 30rem);
+  
+  top: 10rem;
+  left: 1rem;
+
+  z-index: -1;
+
+  /* filter: brightness(75%); */
+
+  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+}
+
+#name_and_links {
+  width: 100vw;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#name {
+  min-height: 5em;
+
+  padding-left: 10vw;
+  padding-bottom: 2vw;
+
+  /* background-color: rgb(179, 245, 185); */
+}
+
+#name h1{
+  line-height: 0.9;
+}
+
+#name h3{
+  position: relative;
+
+  padding-left: 0.5vw;
+}
+
+#links {
+  min-height: 2rem;
+  max-height: 3rem;
+
+  padding-left: min(30rem, 20vw);
+  /* margin-left: 20rem; */
+
+  /*background-color: rgb(185, 179, 245); */
+}
+
+#links ul.inline_list li a:link {
+  color: rgb(64, 134, 255);
+  text-decoration: none;
+}
+
+#links ul.inline_list li a:visited {
+  color: rgb(64, 134, 255);
+  text-decoration: none;
+}
