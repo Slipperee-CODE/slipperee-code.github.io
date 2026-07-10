@@ -40,6 +40,14 @@ body {
     border-bottom: 1px solid #FFFFFF;
 }
 
+.underlined-text {
+    text-decoration: underline;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
 .links {
     justify-content: space-between;
     margin: 0.5rem;
@@ -139,6 +147,8 @@ body {
     margin-right: 0.5rem;
 }
 
+
+
 .media-100 {
     max-width: 100%;
     width: 100%;
@@ -147,6 +157,11 @@ body {
 .media-50 {
     max-width: 50%;
     width: 50%;
+}
+
+.media-33 {
+    max-width: 33.333%;
+    width: 33.333%;
 }
 
 .media-25 {
