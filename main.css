@@ -9,10 +9,18 @@ body {
     line-height: 1.2;
 }
 
+.centered-text {
+    text-align: center;
+}
+
 .centered-flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.with-gap {
+    gap: 0.5rem;
 }
 
 .centered-flex-col {
@@ -152,6 +160,11 @@ body {
 .media-100 {
     max-width: 100%;
     width: 100%;
+}
+
+.media-66 {
+    max-width: 65.5%;
+    width: 65.5%;
 }
 
 .media-50 {
