@@ -132,11 +132,11 @@ body {
 
 .project-header {
     background-color: #ffffff00;
-    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .project-header:hover {
-    background-color: #78d96f56;
+    background-color: #6f71d956;
 }
 
 .project-header:target {
@@ -155,18 +155,18 @@ body {
 }
 
 .media-50 {
-    max-width: 50%;
-    width: 50%;
+    max-width: 49.5%;
+    width: 49.5%;
 }
 
 .media-33 {
-    max-width: 33.333%;
-    width: 33.333%;
+    max-width: 32.5%;
+    width: 32.5%;
 }
 
 .media-25 {
-    max-width: 25%;
-    width: 25%;
+    max-width: 24.5%;
+    width: 24.5%;
 }
 
 .image-description {
