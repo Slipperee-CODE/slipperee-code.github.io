@@ -135,9 +135,23 @@ body {
     background-color: #d9b26f56;
 }
 
-.video-100 {
+.right-margin {
+    margin-right: 0.5rem;
+}
+
+.media-100 {
     max-width: 100%;
     width: 100%;
+}
+
+.media-50 {
+    max-width: 50%;
+    width: 50%;
+}
+
+.media-25 {
+    max-width: 25%;
+    width: 25%;
 }
 
 .image-description {
