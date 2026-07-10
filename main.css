@@ -20,7 +20,7 @@ body {
 }
 
 .centered {
-    width: clamp(30rem, 60vw + 1rem, 100rem);
+    width: clamp(30rem, 50vw + 1rem, 100rem);
     margin:auto;
 }
 
@@ -147,8 +147,6 @@ body {
     margin-right: 0.5rem;
 }
 
-
-
 .media-100 {
     max-width: 100%;
     width: 100%;
@@ -171,7 +169,7 @@ body {
 
 .image-description {
     color: #6e6e6e;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .gray {
@@ -204,7 +202,7 @@ h3 {
 }
 
 p {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     margin: 0.5rem 0;
 }
 
@@ -223,6 +221,10 @@ button {
 
 button:hover {
     background-color: #0C451D;
+}
+
+button:disabled {
+    background-color: #232b26;
 }
 
 #github-button {
