@@ -1,0 +1,261 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e1e;
+    overflow-x: hidden;
+
+    line-height: 1.2;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.centered-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.with-gap {
+    gap: 0.5rem;
+}
+
+.centered-flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centered {
+    width: clamp(30rem, 50vw + 1rem, 100rem);
+    margin:auto;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
+
+#about-me-content {
+    margin-top: 0.5rem;
+    gap: 2rem;
+}
+
+.underlined {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.underlined-text {
+    text-decoration: underline;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.links {
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+.slide-right {
+    justify-content: space-around;
+    
+    animation: slide-right 25s linear normal infinite backwards;    
+}
+
+.slide-left {
+    justify-content: space-around;
+    
+    animation: slide-right 20s linear reverse infinite backwards;    
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }   
+}
+
+.image-collection {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    margin: 10px;
+
+    /* background-color: #DF2935; */
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-collection:hover {
+    transform: scale(1.025);
+}
+
+.image-collection h2 {
+    position: absolute;
+    margin: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.image-collection:hover h2 {
+    opacity: 1;
+}
+
+.project {
+    margin: 1rem 0rem;
+}
+
+.project summary {
+    list-style-type: none;
+} 
+
+.project summary h2::before {
+  content: ">";
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.project[open] > summary h2::before {
+  transform: rotate(90deg);
+}
+
+.project-header {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.project-header {
+    background-color: #ffffff00;
+    transition: background-color 0.2s ease;
+}
+
+.project-header:hover {
+    background-color: #6f71d956;
+}
+
+.project-header:target {
+    background-color: #d9b26f56;
+}
+
+.right-margin {
+    margin-right: 0.5rem;
+}
+
+.media-100 {
+    max-width: 100%;
+    width: 100%;
+}
+
+.media-66 {
+    max-width: 65.5%;
+    width: 65.5%;
+}
+
+.media-50 {
+    max-width: 49.5%;
+    width: 49.5%;
+}
+
+.media-33 {
+    max-width: 32.5%;
+    width: 32.5%;
+}
+
+.media-25 {
+    max-width: 24.5%;
+    width: 24.5%;
+}
+
+.image-description {
+    color: #6e6e6e;
+    font-size: 1.1rem;
+}
+
+
+
+button, h1, h2, h3, p, .project summary h2::before { 
+    font-family: 'DM Sans';
+    color: #FFFFFF;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem; 
+}
+
+h2 {
+    font-size: 1.25rem; 
+}
+
+h3 {
+    font-size: 1rem; 
+}
+
+p {
+    font-size: 1.15rem;
+    margin: 0.5rem 0;
+}
+
+a {
+    color: #4086ff
+}
+
+button {
+    background-color: #167D35;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0C451D;
+}
+
+button:disabled {
+    background-color: #232b26;
+}
+
+#github-button {
+    background-color: #685D6F;
+}
+
+#github-button:hover {
+    background-color: #3E3843;
+}
+
+#linkedin-button {
+    background-color: #3F84E5;
+}
+
+#linkedin-button:hover {
+    background-color: #1B62C5;
+}
+
+#youtube-button {
+    background-color: #DF2935;
+}
+
+#youtube-button:hover {
+    background-color: #A01821;
+}
