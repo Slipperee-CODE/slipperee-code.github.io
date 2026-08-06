@@ -1,6 +1,8 @@
 :root {
-    --c-text:#E4E4EF; 
-    --c-bg:#181818;
+    /* --c-text:#E4E4EF; */
+    --c-text:#FFFFFF;
+    /* --c-bg:#181818; */
+    --c-bg:#1e1e1e;
     --c-alt-bg:#cb00008e;
     --c-hyperlink:#4086ff;
     --c-gray:#6e6e6e;
@@ -41,7 +43,7 @@ body {
 }
 
 .boxed-element {
-    border: 1px solid var(--c-gray);
+    border: 1px solid var(--c-text);
     margin: 0.5rem 0;
     padding: 0.5rem;
 }
@@ -68,7 +70,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    padding: 1rem;
+    padding: 0.5rem 0;
     gap: 2rem;
 }
 
@@ -125,7 +127,16 @@ body {
 }
 
 .happening {
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
+    transition: transform 0.2s ease;
+}
+
+.happening:hover {
+    transform: scale(1.05);
+}
+
+.happening:hover[open] {
+    transform: scale(1);
 }
 
 .happening__summary {
@@ -149,6 +160,10 @@ body {
   transform: rotate(90deg);
 }
 
+.happening__content {
+    padding: 0.5rem;
+}
+
 button, h1, h2, h3, p {
     margin: 0;
 
@@ -156,8 +171,23 @@ button, h1, h2, h3, p {
     color: var(--c-text);
 }
 
+h1 {
+    font-size: 2rem; 
+}
+
+h2 {
+    font-size: 1.25rem; 
+}
+
+h3 {
+    font-size: 1rem; 
+}
+
 p {
     font-size: 1.15rem;
+}
+
+.with-vertical-margin {
     margin: 0.5rem 0;
 }
 
