@@ -1,0 +1,10 @@
+{
+    "title":"CAEE | CS + Math Tutor",
+    "src":"./resources/project_icons/shaded/caee.png",
+    "occurred":"Jan 2026 - PRESENT",
+    "links": {
+        "link#1's name": "link#1",
+        "link#2's name": "link#2"
+    },
+    "content":"<p> This is the content for this happening. </p>"
+}

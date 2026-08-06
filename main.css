@@ -1,7 +1,7 @@
 :root {
     --c-text:#E4E4EF; 
     --c-bg:#181818;
-    --c-box-bg:#cb00008e;
+    --c-alt-bg:#cb00008e;
     --c-hyperlink:#4086ff;
     --c-gray:#6e6e6e;
     --c-gold:#D9B26F;
@@ -30,15 +30,20 @@ body {
 }
 
 .content {
-    background-color: var(--c-box-bg);
+    /* background-color: var(--c-alt-bg); */
 
     width: clamp(30rem, 50vw + 1rem, 100rem);
     margin: auto;
-    padding: 0.5rem;
 }
 
 .underlined-element {
     border-bottom: 1px solid var(--c-text);
+}
+
+.boxed-element {
+    border: 1px solid var(--c-gray);
+    margin: 0.5rem 0;
+    padding: 0.5rem;
 }
 
 .header {
@@ -57,21 +62,91 @@ body {
     margin: 0.5rem;
 }
 
-.about-me {
-
-}
-
 .about-me__content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    padding: 1rem
+    padding: 1rem;
+    gap: 2rem;
 }
 
-.about-me__me {
-    margin-right: 1rem;
+.gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slide-right {
+    animation: slide-right 25s linear normal infinite backwards;    
+}
+
+.slide-left {    
+    animation: slide-right 20s linear reverse infinite backwards;    
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }   
+}
+
+.happening-thumbnail {
+    position: relative;
+
+    width: 20rem;
+    height: 20rem;
+
+    margin: 0.5rem;
+
+    /* background-color: #DF2935; */
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.happening-thumbnail:hover {
+    transform: scale(1.025);
+}
+
+.happening-thumbnail__title {
+    position: absolute;
+    margin: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.happening-thumbnail:hover .happening-thumbnail__title{
+    opacity: 1;
+}
+
+.happening {
+    margin: 1rem 0rem;
+}
+
+.happening__summary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    list-style-type: none;
+} 
+
+.happening__title::before {
+  content: ">";
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.happening[open] .happening__summary .happening__title::before {
+  transform: rotate(90deg);
 }
 
 button, h1, h2, h3, p {
@@ -81,8 +156,17 @@ button, h1, h2, h3, p {
     color: var(--c-text);
 }
 
+p {
+    font-size: 1.15rem;
+    margin: 0.5rem 0;
+}
+
 .subtle {
     color: var(--c-gray);
+}
+
+.gold {
+    color: var(--c-gold)
 }
 
 a {
@@ -124,5 +208,4 @@ button:disabled {
 } 
 #youtube-button:hover {
     background-color: var(--c-yt-button-hovered)
-
 }

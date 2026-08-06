@@ -10,25 +10,111 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+
+    <script>
+        function createHappeningBuilder(gallery, section) {
+            return async function createHappening(happening_id) {
+                const happening_json = await fetch(`./resources/json/${happening_id}.json`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const happening_thumbnail = document.createElement('div');
+                        happening_thumbnail.classList.add("happening-thumbnail");
+                        happening_thumbnail.inner_html = 
+                        `
+                        <h2 class="happening-thumbnail__title"> ${data.title} </h2>
+                        <img onclick="goToSection('${happening_id}')" src="${data.src}">     
+                        `;
+                        gallery.appendChild(happening_thumbnail);
+
+                        
+                        // TODO: handle buttons and handle non-existent content with some default
+                        const happening_entry = document.createElement('details');
+                        happening_entry.classList.add("happening");
+                        happening_entry.classList.add("boxed-element");
+                        happening_entry.name = "happenings";
+                        happening_entry.inner_html = 
+                        `
+                        <summary id="${happening}" class="happening__summary">
+                            <h2 class="happening__title"> ${data.title} </h2>
+                            <h3 class="subtle"> ${data.occured} </h3>
+                        </summary>
+
+                        <div class="important-links">
+                            <button onclick="goToSite('https://engineering.berkeley.edu/students/academic-support/')"> CAEE's Website </button>
+                        </div>
+
+                        <div>
+                            ${data.content}
+                        </div>     
+                        `;
+                        section.appendChild(happening_entry);
+                }); //.catch(error => console.error("Error parsing happening JSONs"));
+            }
+        }
+
+        const project_list = [
+            "a-telescoping-phone-holder",
+            "big-cookie-cutters",
+            "big-keyboard-keys",
+            "combat-robotics-learning-resources",
+            "combat-robotics",
+            "crbbot",
+            "doodle-dogs",
+            "ftc",
+            "golfd",
+            "headphone-hangers",
+            "i-dont-node",
+            "integrordle",
+            "masa-robot-arm",
+            "mr-monrovia",
+            "physical-digital-darts",
+            "somni",
+            "zeroth-responder"
+        ];
+
+        const experience_list = [
+            "thecoderschool",
+            "venture-valley",
+            "wec-and-weg", 
+            "stem-tutoring",
+            "caee"
+        ];
+
+        const test_list = [
+            "caee"
+        ];
+
+        const experience_gallery = document.getElementById("experience-gallery");
+        const experience = document.getElementById("experience");
+
+        const project_gallery = document.getElementById("project-gallery");
+        const projects = document.getElementById("projects");
+
+        // experience_list.forEach(createHappeningBuilder(experience_gallery, experience)); 
+        // project_list.forEach(createHappeningBuilder(project_gallery, projects));
+
+        test_list.forEach(createHappeningBuilder(experience_gallery, experience)); 
+        test_list.forEach(createHappeningBuilder(project_gallery, projects));
+    </script>
 </head>
 <body>
     <div class="content">
         <div class="header underlined-element">
             <h1> Cai Scheidler </h1>
-            <h2> scheidlercai@gmail.com </h2>
+            <h3> scheidlercai@gmail.com </h3>
         </div>
 
         <div class="important-links">
-            <button onclick="goTo('https://github.com/Slipperee-CODE')" id="github-button"> GitHub </button> </a>
-            <button onclick="goTo('https://www.linkedin.com/in/caischeidler/')" id="linkedin-button"> LinkedIn </button> </a>
-            <button onclick="goTo('Cai Scheidler Resume.pdf')" id="resume-button"> Resume </button> </a>
-            <button onclick="goTo('https://www.youtube.com/@slipperee_slime')" id="youtube-button"> YouTube </button> </a>
+            <button onclick="goToSite('https://github.com/Slipperee-CODE')" id="github-button"> GitHub </button> </a>
+            <button onclick="goToSite('https://www.linkedin.com/in/caischeidler/')" id="linkedin-button"> LinkedIn </button> </a>
+            <button onclick="goToSite('Cai Scheidler Resume.pdf')" id="resume-button"> Resume </button> </a>
+            <button onclick="goToSite('https://www.youtube.com/@slipperee_slime')" id="youtube-button"> YouTube </button> </a>
         </div>
 
         <div class="about-me">
             <h1 class="underlined-element"> About Me </h1>
             <div class="about-me__content">
-                <img class="about-me__me" src="resources/me.png" width="200px" height="200px">
+                <img src="resources/me.png" width="200px" height="200px">
                 <div>
                     <p> Hi there, I'm Cai Scheidler! </p>
                     <p> I enjoy teaching, building software & hardware systems, and learning! </p>    
@@ -41,22 +127,27 @@
         </div> 
     </div>
 
+    <h1 class="content underlined-element"> Experience Gallery </h1>
+    <div id="experience-gallery" class="gallery slide-left"> </div>
+
+    <h1 class="content underlined-element"> Project Gallery </h1>
+    <div id="project-gallery" class="gallery slide-right"> </div>
+    
+    <div id="experiences" class="content">
+        <h1 class="underlined-element"> Experience </h1>
+    </div>
+
+    <div id="projects" class="content">
+        <h1 class="underlined-element"> Projects </h1>
+    </div>
+
     <script>
-        function goTo(url) {
+        function goToSite(url) {
             open(url, "_blank");
         }
 
-        const projects = {
-            "combat-robotics":"Combat Robotics & Donuts",
-            "golfd":"Golf'd"
+        function goToSection(url) {
+            open(url, "_blank");
         }
-        const experience = {
-            "thecoderschool":"theCoderSchool Pasadena",
-            "venture-valley":"Venture Valley"
-        } 
-
-        // for (const [key, value] of Object.entries(user)) {
-        //     console.log(`${key}: ${value}`);
-        // }
     </script>
 </body>
