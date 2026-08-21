@@ -167,5 +167,14 @@
 
         experience_list.forEach(createHappeningBuilder(experience_gallery, experience)); 
         project_list.forEach(createHappeningBuilder(project_gallery, projects));
+
+        // Fetch the content from the external HTML file
+        fetch('content.html')
+        .then(response => response.text()) // Convert the response data to a text string
+        .then(html => {
+            // Inject the HTML into a specific container element
+            document.getElementById('content-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading HTML:', error));
     </script>
 </body>
