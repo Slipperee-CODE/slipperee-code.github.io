@@ -1,0 +1,11 @@
+{
+    "title": "Physical Digital Darts",
+    "src": "./resources/images/happening_icons/shaded/physical-digital-darts-shaded.png",
+    "occurred": "Oct 2025",
+    "links": {
+        "Code": "https://github.com/commonkestrel/physical-digital-darts",
+        "Devpost Submission": "https://devpost.com/software/digital-physical-darts-wii-darts",
+        "CalHacks' Website": "https://www.calhacks.io/"
+    },
+    "content": "physical-digital-darts"
+}

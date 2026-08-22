@@ -3,832 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wonderful homepage of Cai Scheidler's (a.k.a. Slipperee-CODE's) portfolio website.">
     <title>Cai's Portfolio</title>
+    <meta name="description" content="The wonderful homepage of Cai Scheidler's (a.k.a. Slipperee-CODE's) portfolio website.">
+    <link rel="icon" type="image/x-icon" href="/resources/me.png">
 
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="index.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-</head> 
+</head>
 <body>
-    <div class="centered">
-        <div id="header" class="underlined">
+    <div class="content">
+        <div class="header underlined-element">
             <h1> Cai Scheidler </h1>
             <h2> scheidlercai@gmail.com </h2>
         </div>
 
-        <div class="links centered-flex-row">
-            <a href="https://github.com/Slipperee-CODE"> <button id="github-button"> GitHub </button> </a>
-            <a href="https://www.linkedin.com/in/caischeidler/"> <button id="linkedin-button"> LinkedIn </button> </a>
-            <a href="Cai Scheidler Resume.pdf"> <button id="resume-button"> Resume </button> </a>
-            <a href="https://www.youtube.com/@slipperee_slime"> <button id="youtube-button"> YouTube </button> </a>
+        <div class="important-links">
+            <button onclick="goToSite('https://github.com/Slipperee-CODE')" id="github-button"> GitHub </button> 
+            <button onclick="goToSite('https://www.linkedin.com/in/caischeidler/')" id="linkedin-button"> LinkedIn </button>
+            <button onclick="goToSite('Cai Scheidler Resume.pdf')" id="resume-button"> Resume </button>
+            <button onclick="goToSite('https://www.youtube.com/@slipperee_slime')" id="youtube-button"> YouTube </button>
+            <!-- <button onclick="goToSite('https://slipperee-code.github.io/61A')" id="github-button"> CS61A Resources </button> -->
         </div>
 
-        <div id="about-me">
-            <h1 class="underlined"> About Me </h1>
-            <div id="about-me-content" class="centered-flex-row">
-                <img src="me.png" width="200px" height="200px">
+        <div class="about-me">
+            <h1 class="underlined-element"> About Me </h1>
+            <div class="about-me__content">
+                <img src="resources/me.png" width="200px" height="200px">
                 <div>
-                    <p> Hi there, I'm Cai Scheidler! </p>
-                    <p> I enjoy teaching, building software & hardware systems, and learning! </p>    
-                    <p> Feel free to email me at <a>scheidlercai@gmail.com</a> if you want to discuss combat robotics, ask a question about one of my projects, or anything else! </p>
+                    <p class="with-vertical-margin"> Hi there, I'm Cai Scheidler! </p>
+                    <p class="with-vertical-margin"> I enjoy teaching, building software & hardware systems, and learning! </p>    
+                    <p class="with-vertical-margin"> Feel free to email me at <a>scheidlercai@gmail.com</a> if you want to discuss combat robotics, ask a question about one of my projects, or anything else! </p>
                     <br>
-                    <p class="image-description"> This image is of me and <a target="_blank" rel="noopener noreferrer" href="https://www2.eecs.berkeley.edu/Faculty/Homepages/denero.html">John DeNero</a>, my CS61A professor.</p>
-                    <p class="image-description"> I got 2nd in an art contest by <a href="#semicolon_john_denero"> drawing him out of semicolons.</a> <p>
+                    <p class="subtle with-vertical-margin"> This image is of me and <a target="_blank" rel="noopener noreferrer" href="https://www2.eecs.berkeley.edu/Faculty/Homepages/denero.html">John DeNero</a>, my CS61A professor.</p>
+                    <p class="subtle with-vertical-margin"> I got 2nd in an art contest by <a href="#semicolon-john-denero"> drawing him out of semicolons.</a> </p>
                 </div>
             </div>
         </div> 
     </div>
 
-    <h1 class="centered underlined"> Experience Gallery </h1>
-    <div>
-        <div class="duplicate-child centered-flex-row">
-            <div class="slide-left centered-flex-row">
-                <div class="image-collection">
-                    <h2> WEC & WEG | Technical Intern </h2>
-                    <a href="#wec-and-weg"><img src="project_icons/shaded/wec-and-weg-shaded.png"></a>     
-                </div>  
-                <div class="image-collection">
-                    <h2> theCoderSchool | Code Coach </h2>
-                    <a href="#thecoderschool"><img src="project_icons/shaded/thecoderschool-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> CAEE | CS + Math Tutor </h2>
-                    <a href="#caee"><img src="project_icons/shaded/caee-shaded.png"></a>     
-                </div>    
-                <div class="image-collection">
-                    <h2> Venture Valley | Content Creator & QA </h2>
-                    <a href="#venture-valley"><img src="project_icons/shaded/venture-valley-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Freelance | STEM Tutor </h2>
-                    <a href="#stem-tutoring"><img src="project_icons/shaded/stem-tutoring-shaded.png"></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1 class="content underlined-element"> Experience Gallery </h1>
+    <div id="experience-gallery" class="gallery slide-left"> </div>
 
-    <!-- https://docs.google.com/presentation/d/111pQPqgR6GJ568pV8E8vwNQnnyH6eKyI19UYm3SD2Zk/edit?slide=id.p#slide=id.p -->
-    <!-- Go for 250 words and 3 images per project   -->
-    <h1 class="centered underlined"> Projects Gallery </h1>
-    <div>
-        <div class="duplicate-child centered-flex-row">
-            <div class="slide-right centered-flex-row">
-                <div class="image-collection">
-                    <h2> Combat Robotics & Donuts </h2>
-                    <a href="#combat-robotics"><img src="project_icons/shaded/combat-robotics-shaded.png"></a>   
-                </div> 
-                <div class="image-collection">
-                    <h2> Combat Robotics Learning Resources </h2>
-                    <a href="#combat-robotics-learning-resources"><img src="project_icons/shaded/combat-robotics-learning-resources-shaded.png"></a>   
-                </div> 
-                <div class="image-collection">
-                    <h2> CRBBot</h2>
-                    <a href="#crbbot"><img src="project_icons/shaded/crbbot-shaded.png"></a>   
-                </div> 
-                <div class="image-collection">
-                    <h2> I Don't Node</h2>
-                    <a href="#i-dont-node"><img src="project_icons/shaded/i-dont-node-shaded.png"></a>   
-                </div> 
-                <div class="image-collection">
-                    <h2> Physical Digital Darts </h2>
-                    <a href="#physical-digital-darts"><img src="project_icons/shaded/physical-digital-darts-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> A Telescoping Phone Holder </h2>
-                    <a href="#a-telescoping-phone-holder"><img src="project_icons/shaded/a-telescoping-phone-holder-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Zeroth Responder </h2>
-                    <a href="#zeroth-responder"><img src="project_icons/shaded/zeroth-responder-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Integrordle </h2>
-                    <a href="#integrordle"><img src="project_icons/shaded/integrordle-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Golf'd </h2>
-                    <a href="#golfd"><img src="project_icons/shaded/golfd-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Somni </h2>
-                    <a href="#somni"><img src="project_icons/shaded/somni-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Doodle Dogs </h2>
-                    <a href="#doodle-dogs"><img src="project_icons/shaded/doodle-dogs-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> First Tech Challenge </h2>
-                    <a href="#ftc"><img src="project_icons/shaded/ftc-shaded.png"></a>  
-                </div> 
-                <div class="image-collection">
-                    <h2> Mr. Monrovia </h2>
-                    <a href="#mr-monrovia"><img src="project_icons/shaded/mr-monrovia-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> A Human Arm Controlled Robot Arm </h2>
-                    <a href="#masa-robot-arm"><img src="project_icons/shaded/masa-robot-arm-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Headphone Hangers </h2>
-                    <a href="#headphone-hangers"><img src="project_icons/shaded/headphone-hangers-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Big Keyboard Keys </h2>
-                    <a href="#big-keyboard-keys"><img src="project_icons/shaded/big-keyboard-keys-shaded.png"></a>     
-                </div>
-                <div class="image-collection">
-                    <h2> Big Cookie Cutters </h2>
-                    <a href="#big-cookie-cutters"><img src="project_icons/shaded/big-cookie-cutters-shaded.png"></a>     
-                </div>
-            </div>  
-        </div>
-    </div>
-
-    <!-- Maybe put thumbnail photos of project/experience at start of project/experience explanation 
-     left aligned with starting text on the right -->
-
-    <!-- Put all videos in an unlisted playlist on your youtube channel and embed them here through their links -->
-    <!-- Will probably need to upload some stuff such as golfd_in_action and semicolon_john_denero -->
-    <!-- See quick summaries of project explanations for rest of videos required -->
-    <div class="centered">
-        <div class="projects">
-            <h1 class="underlined"> Experience </h1>
-            <details class="project" name="dropdowns">
-                <summary id="caee" class="project-header underlined"> 
-                    <h2 class="project-title"> CAEE | CS + Math Tutor </h2>
-                    <h3 class="gray"> Jan 2026 - <span class="gold">PRESENT</span></h3>
-                </summary>
-                    
-                <!-- Explain the types of tutoring you do (Math54-51, CS61A/B) and something interesting from each class you've taken, include the CS61A interpreter bug, Stoke's theorem song, AND CS61B/Math54 3D renderer project -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://engineering.berkeley.edu/students/academic-support/"> <button> CAEE's Website </button> </a>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> As a tutor at UC Berkeley's Center for Access to Engineering Excellence (CAEE), I help students with:  </p>
-                        <p> - Math 51 (Calculus 1) </p>
-                        <p> - Math 52 (Calculus 2) </p>
-                        <p> - Math 53 (Multivariable Calculus) </p>
-                        <p> - Math 54 (Linear Algebra & Differential Equations) </p>
-                        <p> - CS61A (Structure and Interpretation of Computer Programs) </p>
-                        <p> - CS61B (Data Structures & Algorithms) </p>
-                        <br>
-                        <p> I believe being a great teacher, requires understanding course content from varying perspectives and approaches. Here's what I've done to practice this skill for myself: </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/caee-shaded.png">
-                        <p class="image-description centered-text">A look into the CAEE</p>
-                    </div>
-                </div>
-                <br>
-                <p class="bold-text"> For Math 53: </p>
-                <p> I made a parody of the Christmas song "Let It Snow! Let It Snow! Let It Snow!" by Dean Martin based around Stokes' Theorem (it's called "Let's use Stokes! Let's use Stokes! Let's use Stokes"). You can watch it <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kLS_c7PtbTs&list=PL7FUgfqI9U4wRM_m0vOH-_gBd_87ZLRQG"> here. </a> </p>
-                <br>
-                <p class="bold-text"> For CS61B & Math 54: </p>
-                <p> I combined linear algebra and Java algorithms to create a 3D renderer from only being able to draw 2D shapes on the screen. </p>
-                
-                <iframe width="560" height="315 " src="https://www.youtube.com/embed/LN8NYqspKp4" title="3DRenderer Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                <p class="image-description"> This project was originally only supposed to be a 2D, grid-based, top-down game. I would link the code but alas I am bound by <a target="_blank" rel="noopener noreferrer" href="https://www2.eecs.berkeley.edu/Faculty/Homepages/joshhug.html"> Josh Hug's</a> syllabus which prohibits <span class="underlined-text">"posting solution code to any assignment in a public place (e.g. a public git repository, Google Drive, Discord, etched into stones above the Mediterranean, etc). This applies even after the semester is over."</span> </p>
-                <p class="image-description"> Shoutout <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/owenwjiang"> Owen Jiang</a> for working on the 2D part of this project. </p>
-                <p class="image-description"> This project was inspired into existence by <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=qjWkNZ0SXfo">this</a> Tsoding video.</p>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="wec-and-weg" class="project-header underlined"> 
-                    <h2 class="project-title"> WEC & WEG | Technical Intern </h2>
-                    <h3 class="gray">May 2026 - <span class="gold">PRESENT</span></h3>
-                </summary>
-                    
-                <!-- Discuss what you learned about (Panel-making, Cat6 cable, XLR, Balanced Audio, 4/0 wire being 4 0's, DMX, DMX protocol, Rentman for Invetory Management, Disecting a complex system as a set of abstractions and explaining the system to others) -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.wiredelectriccompany.com/"> <button> WEC's Website </button> </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.wiredentertainmentgroup.com/"> <button> WEG's Website</button> </a>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> As an intern at Wired Electric Company (WEC) & Wired Entertainment Group (WEG), I learned a whole lot about what goes into live audio & video production, industrial control panel construction, and mantaining a well-kept inventory system.</p>
-                        <br>
-                        <p>It was fun to dissect the companies' inventory management system (Rentman) as a way of practicing <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/7zu30DhJLKU?si=ZxlJkwlQM12G3FsN&t=441">working within abstractions.</a></p>  
-                        <br>
-                        <p>Rentman also taught me that naming & describing settings properly & thoroughly is VERY important (Having the setting "Reserved from stock" have options "Reserved from stock" and "Available outside this combination" feels slightly strange. You also can't really know what the options do until you select and test them).</p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/wec-and-weg-shaded.png">
-                        <p class="image-description centered-text">Top: An industrial control panel</p>
-                        <p class="image-description centered-text">Bottom: Some AV racks</p>
-                    </div>
-                </div>
-
-                <br>
-                <p>Here are some fun things I learned: </p>
-                <p> - The "Cat" in "Cat6 ethernet cable" stands for "Category." There are different ways ethernet cables are wired (one of which is white-orange, orange, white-green, blue, white-blue, green, white-brown, brown).</p>
-                <p> - The "XLR" in "XLR cable" originally stood for "<span class="bold-text">X</span> series connector, with a <span class="bold-text">L</span>atch, and a <span class="bold-text">R</span>esilient rubber compound insulator." </p>
-                <p> - The "TRS" in "1/X in. TRS cable" stands for <span class="bold-text">T</span>ip, <span class="bold-text">R</span>ing & <span class="bold-text">S</span>leeve ("1/X in. TS Cable" is just <span class="bold-text">T</span>ip & <span class="bold-text">S</span>leeve) which refers to the 3 separate conductors at the end of the cable. </p>
-                <p> - A DMX (Digital Multiplex) "Universe" of 512 channels is a sequence of 512 bytes. Each device takes as many bytes as it needs to be fully controlled (e.g. 1 for brightness, 4 for brightness & RGB color control, etc.) and relays the remaining sequence onwards to the rest of the DMX fixtures. </p>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="stem-tutoring" class="project-header underlined"> 
-                    <h2 class="project-title"> Freelance | STEM Tutor </h2>
-                    <h3 class="gray">Sep 2024 - <span class="gold">PRESENT</span></h3>
-                </summary>
-                    
-                <!-- Explain the types of freelance tutoring you've done (2x AP Calc BC, 1x Python, and how to contact you if people want to be tutored in some subject -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://slipperee-code.github.io/"> <button> My Website :D </button> </a>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/stem-tutoring-shaded.png">
-                        <p class="image-description centered-text"> -x^2, sin(x), & -x</p>
-                    </div>
-                </div>
-            </details>
+    <h1 class="content underlined-element"> Project Gallery </h1>
+    <div id="project-gallery" class="gallery slide-right"> </div>
     
-            <details class="project" name="dropdowns">
-                <summary id="thecoderschool" class="project-header underlined"> 
-                    <h2 class="project-title"> theCoderSchool | Code Coach </h2>
-                    <h3 class="gray">Jul 2024 - Jul 2025</h3>
-                </summary>
-                    
-                <!-- Discuss what you did at theCoderSchool, summer camps teaching students Python turtles and block programming for robots, Scratch and explaining high-level programming concepts to 10 year olds, when you spend a year explaining things to children, you get pretty good at breaking problems down to the level a child could understand) !-->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.thecoderschool.com/"> <button> theCoderSchool's Website </button> </a>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> As a Code Coach at theCoderSchool, I helped students aged 7-18 learn Python, Scratch, and Unity/C# in summer camps and in 1 hour long, 1 on 2 sessions. Being a Code Coach gave me lots of practice breaking down high-level programming concepts in simpler terms. I've explained velocity, acceleration, and gravity to kids by jumping up and down and running around.</p>
-                        <br>
-                        <p> I also got a lot of practice at making compromises. </p>
-                        <p class="image-description">Alright, 3 more minutes of drawing this sprite and then we can program it! How does that sound? </p>
-                        <br>
-                        <p> Also, if you've trying to teach what functions are to young students, try the <a target="_blank" rel="noopener noreferrer" href="https://scausey.github.io/return-statements-according-to-toast/">Toaster Technique.</a></p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/thecoderschool-shaded.png">
-                        <p class="image-description centered-text">A look into theCoderSchool</p>
-                    </div>
-                </div>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="venture-valley" class="project-header underlined"> 
-                    <h2 class="project-title"> Venture Valley | Content Creator & QA  </h2>
-                    <h3 class="gray">Jun 2023 - Feb 2024</h3>
-                </summary>
-                    
-                <!-- Talk about how you did 60+ hours of QA testing and found countless bugs that you then reported directly to the developers in Slack
-                 Would be nice if you had a picture of this but you might not ^
-
-                Talk about how you scripted, recorded, and edited these videos all on your own in Davinci Resolve, 
-                 explain/include the videos for teachers/students in Poland + the henry clay video (with an explanation of who Henry Clay is below and fun facts about his birthday)-->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://venturevalleygame.com/"> <button> Venture Valley's Website </button> </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=VnPnEjpn0OM&list=PLa-pT-wJtNNk"> <button> Videos I Made </button> </a>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/venture-valley-shaded.png">
-                        <p class="image-description centered-text"> A screenshot from one of my videos</p>
-                    </div>
-                </div>                
-            </details>
-        </div>
-
-        <div class="projects">
-            <h1 class="underlined"> Projects </h1>
-            <details class="project" name="dropdowns">
-                <summary id="combat-robotics" class="project-header underlined">
-                    <h2 class="project-title"> Combat Robotics & Donuts </h2>
-                    <h3 class="gray">Aug 2025 - <span class="gold">PRESENT</span></h3>
-                </summary>
-                    
-                <!-- Link all donut of doom in 1 video as first thing after a quick intro
-                 then say "Now I'll explain how all that even happened" or smth like that -->
-                <!-- Explain how donut v1 came to be, 
-                 how donut v2 came to be,
-                 how donut v3 came to be,
-                 how donut v4 came to be,
-                 how donut v5 came to be + cool things that you do in the code and cad -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Slipperee-CODE/DONUT_MELT"><button> Code</button></a>
-                    <button disabled> CAD </button>
-                    <button disabled> PCB </button>
-                    <button disabled> Fights </button>
-                    <button disabled> Doom </button>
-                    <button disabled> Despair </button>
-                    <button disabled> CRB </button>
-                    <button disabled> Melty Discord </button>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                        <br>
-                        <p> Donut of Doom's most recent fights at Berkeley Bot Bash 2026 can be found here: </p>
-                        <p> - <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/fAmobOCuXes">Fight #1</a></p>
-                        <p> - <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/FZXLn6lfBFI">Fight #2</a></p>
-                        <p> - <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/s7dslklJbyw">Fight #3</a></p>
-                        <p> - <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/urRS_H-3zx0">Fight #4</a></p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/combat-robotics-shaded.png">
-                        <p class="image-description centered-text"> Donut of Doom circles its prey</p>
-                    </div>
-                </div>  
-
-                <img class="media-25" src="images/combat-robotics/doom_v1/top_down.jpg">
-                <img class="media-25" src="images/combat-robotics/doom_v1/weighing_in.jpg">
-                <img class="media-25" src="images/combat-robotics/doom_v2/top_down.jpg">
-                <img class="media-25" src="images/combat-robotics/doom_v2/pcb.jpg">
-
-                <img class="media-33" src="images/combat-robotics/doom_v3/custom_casted_wheels.jpg">
-                <img class="media-33" src="images/combat-robotics/doom_v3/on_fantik.jpg">
-                <img class="media-33" src="images/combat-robotics/doom_v3/on_rumble_w.jpg">
-
-                <img class="media-25" src="images/combat-robotics/doom_v4/above_side_view.jpg">
-                <img class="media-25" src="images/combat-robotics/doom_v4/on_the_side_view.jpg">
-                <img class="media-25" src="images/combat-robotics/doom_v4/most_destructive.jpg">
-                <img class="media-25" src="images/combat-robotics/doom_v4/first_place_and_most_destructive.jpg">
-                
-                <iframe width="368" height="655" src="https://www.youtube.com/embed/kzNNyJmbasI" title="My first combat robot!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ECPa3WXcjE0" title="all of Donut of Doom in one video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="combat-robotics-learning-resources" class="project-header underlined">
-                    <h2 class="project-title"> Combat Robotics Learning Resources </h2>
-                    <h3 class="gray">June 2026 - <span class="gold">PRESENT</span></h3>
-                </summary>
-                    
-                <!-- Explain your role in Combat Robotics at Berkeley (CRB) and how you put together these resources for CRB students to make their first 1lb robot but so can you! -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://combatrobotics.studentorg.berkeley.edu/"><button> CRB's Website </button></a>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/combat-robotics-learning-resources-shaded.png">
-                        <p class="image-description centered-text"><a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1_4SjWBSmRzUF_1BycKUDimYtuERy-P9vDUuK26fJvfA/edit?slide=id.p#slide=id.p"> Worksession #1 </a></p>
-                    </div>
-                </div>  
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="crbbot" class="project-header underlined">
-                    <h2 class="project-title"> CRBBot </h2>
-                    <h3 class="gray"> June 2026 - <span class="gold">PRESENT</span> </h3>
-                </summary>
-                    
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/combatroboticsberkeley/CRBBot"><button> Code </button></a>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/crbbot-shaded.png">
-                        <p class="image-description centered-text"> A discord bot for CRB's discord server </p>
-                    </div>
-                </div>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="i-dont-node" class="project-header underlined">
-                    <h2 class="project-title"> I Don't Node </h2>
-                    <h3 class="gray">Mar 2026</h3>
-                </summary>
-                    
-                <!-- add a video of gameplay, an explanation of gameplay and how the project programically functions -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/lgarciasanchez5450/PGCE-Winter-Jam-2026"><button> Code </button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://hithere32123.itch.io/i-dont-node"><button> itch.io Page </button></a>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/i-dont-node-shaded.png">
-                        <p class="image-description centered-text"> We didn't know what to name the game. </p>
-                    </div>
-                </div>
-                
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/s1tZiz4APLg" title="I Don&#39;t Node Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="physical-digital-darts" class="project-header underlined">
-                    <h2 class="project-title"> Physical Digital Darts </h2>
-                    <h3 class="gray">Oct 2025</h3>
-                </summary>
-                    
-                <!-- Explain the idea behind this project and what it ended up taking to get it to work, say you won something -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/commonkestrel/physical-digital-darts"><button> Code</button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://devpost.com/software/digital-physical-darts-wii-darts"><button> Devpost Submission</button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.calhacks.io/"><button> CalHacks' Website </button></a>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/physical-digital-darts-shaded.png">
-                        <p class="image-description centered-text"> Me playing (physical digital) darts </p>
-                    </div>
-                </div>
-
-                <img class="media-50" src="images/physical-digital-darts/meet_the_team.jpg">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/d-0ktDKMHS8" title="Physical Digital Darts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="a-telescoping-phone-holder" class="project-header underlined">
-                    <h2 class="project-title"> A Telescoping Phone Holder </h2>
-                    <h3 class="gray"> Nov 2025 </h3>
-                </summary>
-                    
-                <!-- Explain the idea behind this project, maybe bring in video of you recording 
-                 combat robotics top down and draw stick figure representation of what your setup looked like to show
-                  that your product was necessary, show that you won everything -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://devpost.com/software/a-telescoping-phone-holder"><button>Devpost Submission</button></a>
-                    <button disabled> CAD </button>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/a-telescoping-phone-holder-shaded.png">
-                        <p class="image-description centered-text"> A nice render by <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/yuxiangt/">Yuxiang Tian</a> </p>
-                    </div>
-                </div>
-
-                <img class="media-33" src="images/a-telescoping-phone-holder/table_top_down.png">
-                <img class="media-33" src="images/a-telescoping-phone-holder/alternative_use.png">
-                <img class="media-33" src="images/a-telescoping-phone-holder/inner_workings.png">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/iYU5oq1pbM0" title="A Telescoping Phone Holder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="zeroth-responder" class="project-header underlined">
-                    <h2 class="project-title"> Zeroth Responder </h2>
-                    <h3 class="gray"> Apr 2026 </h3>
-                </summary>
-                    
-                <!-- add a video of gameplay, an explanation of gameplay and how the project programically functions -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1enS69dIbFPd3c31iNewE9B95djRrHfjgcJUzc1VxJbI/edit?usp=sharing"><button> Design Document </button></a>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/zeroth-responder-shaded.png">
-                        <p class="image-description centered-text"> A whimsical medicine delivery drone </p>
-                    </div>
-                </div>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="semicolon_john_denero" class="project-header underlined">
-                    <h2 class="project-title"> Semicolon John DeNero </h2>
-                    <h3 class="gray">Dec 2025</h3>
-                </summary>
-                    
-                <!-- Explain what is even going on here, what programming language is this in and how did you make this work (explain the Python part of the process)
-                 opencv -> get image as array in code -> scale down image -> grayscale image -> iterate through array -> overthreshold becomes semicolon and below threshold becomes space, (maybe make animation showing what's going on?) -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://gist.github.com/Slipperee-CODE/cb1315b9974dab26d84fd1be4c3dac38"> <button> Code Containing Semicolon John DeNero </button></a>
-                </div>
-                
-                <p> Here is Semicolon John DeNero Made Using Code Containing Semicolon John DeNero (reviewed by John DeNero himself): </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/G3gi30so7uo?si=YV2s7-weU8Y4zUhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="integrordle" class="project-header underlined">
-                    <h2 class="project-title"> Integrordle </h2>
-                    <h3 class="gray">May 2024</h3>
-                </summary>
-                    
-                <!-- Get a video of integrordle working, talk about what it is and talk about what it took to make it work -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Slipperee-CODE/Integrordle"><button> Code</button></a>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/integrordle-shaded.png">
-                        <p class="image-description centered-text"> Integrals + Wordle = Integrordle </p>
-                    </div>
-                </div>
-                
-                <img class="media-33" src="images/integrordle/home_screen.png">
-                <img class="media-33" src="images/integrordle/gameplay.png">
-                <img class="media-33" src="images/integrordle/you_win.png">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6LaT6Y5QhGk" title="Integrordle Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="golfd" class="project-header underlined">
-                    <h2 class="project-title"> Golf'd </h2>
-                    <h3 class="gray">Aug 2024 - July 2026</h3>
-                </summary>
-                    
-                <!-- Keep video of gameplay, Talk about what Golf'd is and what it is taking to make it work -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/acarlson777/Golfd"><button> Code</button></a>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/golfd-shaded.png">
-                        <p class="image-description centered-text"> This is I. Ron </p>
-                    </div>
-                </div>
-
-                <p> Here is some Golf'd gameplay: </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jaElgNO0eSw" title="Golf&#39;d Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="somni" class="project-header underlined">
-                    <h2 class="project-title"> Somni </h2>
-                    <h3 class="gray">Aug 2023 - Aug 2024</h3>
-                </summary>
-
-                <!-- Get video of gameplay, talk about what it is and what it took to make it work, link to apple app store -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/acarlson777/Somnia2024"><button> Code</button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/somn%C3%AF/id6474272770"><button> iOS App Store</button></a>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/somni-shaded.png">
-                        <p class="image-description centered-text"> The start of Somni </p>
-                    </div>
-                </div>
-                
-                <img class="media-33" src="images/somni/home_screen.png">
-                <img class="media-33" src="images/somni/beas_room.png">
-                <img class="media-33" src="images/somni/woebegones_castle.png">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/UGOWv1u7IPg" title="Somni Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="doodle-dogs" class="project-header underlined">
-                    <h2 class="project-title"> Doodle Dogs </h2>
-                    <h3 class="gray">Aug 2022 - Aug 2023</h3>
-                </summary>
-                    
-                <!-- Get video of gameplay, talk about what it is and what it took to make it work, link to app store -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/LarryHellen/DoodleDogs"><button> Code</button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/doodledogs/id6443924814"><button> iOS App Store</button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.congressionalappchallenge.us/23-ca31/"><button> Congressional App Challenge </button></a>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/doodle-dogs-shaded.png">
-                        <p class="image-description centered-text"> The start of Doodle Dogs </p>
-                    </div>
-                </div>
-
-                <img class="media-25" src="images/doodle-dogs/at_dc.jpg">
-                <img class="media-25" src="images/doodle-dogs/at_school.jpg">
-                <img class="media-25" src="images/doodle-dogs/home_screen.png">
-                <img class="media-25" src="images/doodle-dogs/match3.png">
-                <iframe width="368" height="655" src="https://www.youtube.com/embed/tYIy_JixiaY" title="DoodleDogs Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="ftc" class="project-header underlined"> 
-                    <h2 class="project-title"> First Tech Challenge </h2>
-                    <h3 class="gray">Aug 2018 - July 2025</h3>
-                </summary>
-                    
-                <!-- Explain your role as a member of FTC team's over the years
-                 Explain what you've created in FTC over the years
-                 Highlight the cool programming and CAD acheivements you acheived + awards -->
-                <!-- upload any necessary videos to Youtube and then embed them here -->
-
-                <!-- Cadding a custom constant force spring driven telescoping arm
-                 and then laser cutting it from wood, as well as lasercutting your
-                 whole bot from wood -->
-
-                <!-- Have CAD be on GrabCAD or GoBilda or smth -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Slipperee-CODE/4625-FTC-IntoTheDeep"><button> Code</button></a>
-                    <button disabled> CAD </button>
-                    <a target="_blank" rel="noopener noreferrer" href="https://ftcscout.org/teams/4625?season=2024"><button> FTC Scout </button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.firstinspires.org/programs/ftc/"><button> FTC's Website </button></a>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/ftc-shaded.png">
-                        <p class="image-description centered-text"> Me in a wizard costume with a dremel </p>
-                    </div>
-                </div>
-
-                <img class="media-33" src="images/ftc/cs_preparations.jpg">
-                <img class="media-33" src="images/ftc/itd_explaining.png">
-                <img class="media-33" src="images/ftc/itd_high_bucket.png">
-                <iframe width="368" height="655" src="https://www.youtube.com/embed/SvKcJEX8I6s" title="ITD | The turret is working!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="368" height="655" src="https://www.youtube.com/embed/XeBT7npoFsI" title="ITD | Autonomous is working!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="mr-monrovia" class="project-header underlined">
-                    <h2 class="project-title"> Mr. Monrovia </h2>
-                    <h3 class="gray">Apr 2025</h3>
-                </summary>
-                    
-                <!-- Explain the circumstances that led you to sing your parody song + that you did not win but that you do have other educational parody songs that you've made linked in the button -->
-                <div class="links centered-flex-row">
-                    <a href="https://www.youtube.com/watch?v=kLS_c7PtbTs&list=PL7FUgfqI9U4wRM_m0vOH-_gBd_87ZLRQG"><button> Educational Parody Songs That I Have Made </button></a>
-                </div>
-
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/mr-monrovia-shaded.png">
-                        <p class="image-description centered-text"> Me singing u-sub to my school </p>
-                    </div>
-                </div>
-                
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/2KnW_x_VdXk" title="Singing &quot;All I Want This Calc Test is U&quot; in Front of My School" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="masa-robot-arm" class="project-header underlined">
-                    <h2 class="project-title"> A Human Arm Controlled Robot Arm </h2>
-                    <h3 class="gray">May 2024</h3>
-                </summary>
-                    
-                <!-- Talk about what it is and what it took to make it work, embed explanation video, show that you won the whole thing -->
-                <div class="links centered-flex-row">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Slipperee-CODE/ArmControlledTurret"><button> Code</button></a>
-                    <button disabled> CAD </button>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/masa-robot-arm-shaded.png">
-                        <p class="image-description centered-text"> Preparing the arm </p>
-                    </div>
-                </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/O9qLW1J7ptc" title="A Human Arm Controlled Robot Arm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="headphone-hangers" class="project-header underlined">
-                    <h2 class="project-title"> Headphone Hangers </h2>
-                    <h3 class="gray">April 2025 - July 2025</h3>
-                </summary>
-                    
-                <!-- Talk about why you did this and link the CAD files from GrabCAD/Thingyverse or Bambu or smth -->
-                <div class="links centered-flex-row">
-                    <button disabled> CAD </button>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/headphone-hangers-shaded.png">
-                        <p class="image-description centered-text"> 2 headphone hanger designs I made</p>
-                    </div>
-                </div>
-
-                <img class="media-25" src="images/headphone-hangers/carlson_back.jpg">
-                <img class="media-25" src="images/headphone-hangers/carlson_front.jpg">
-                <img class="media-25" src="images/headphone-hangers/carlson_cad.png">
-                <img class="media-25" src="images/headphone-hangers/dobson_side.jpg">
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="big-keyboard-keys" class="project-header underlined">
-                    <h2 class="project-title"> Big Keyboard Keys </h2>
-                    <h3 class="gray">Apr 2025</h3>
-                </summary>
-                    
-                <!-- explain how this links back to Mr. Monrovia, embed videos of it working here as opposed to linking them, 
-                 explain how this works and how you went about making the keyswitches, explain why you did not use it (needed cleaner wire management, hard to press while moving quickly, inconsistent/difficult to press well because of edges of keyswitch, what would I do if I were to redo it) -->
-                <div class="links centered-flex-row">
-                    <button disabled> CAD </button>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/big-keyboard-keys-shaded.png">
-                        <p class="image-description centered-text"> A big W key</p>
-                    </div>
-                </div>
-
-                <img class="media-50" src="images/big-keyboard-keys/keyswitch.png">
-                <iframe width="368" height="655" src="https://www.youtube.com/embed/FrtRZbo3Hus" title="Big Keyboard Keys #1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="368" height="655" src="https://www.youtube.com/embed/44dwHWgMtaQ" title="Big Keyboard Keys #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </details>
-
-            <details class="project" name="dropdowns">
-                <summary id="big-cookie-cutters" class="project-header underlined">
-                    <h2 class="project-title"> Big Cookie Cutters </h2>
-                    <h3 class="gray">Sep 2024 - Oct 2024</h3>
-                </summary>
-                    
-                <!-- explain why you made them and the result, will not be very long, put thumbnail photo here -->
-                <div class="links centered-flex-row">
-                    <button disabled> CAD </button>
-                </div>
-                
-                <div class="centered-flex-row with-gap">
-                    <div class="media-66">
-                        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer" >scheidlercai@gmail.com</a> to learn more about this experience! </p>
-                    </div>
-                    <div class="media-33 centered-flex-column with-gap">
-                        <img class="media-100" src="project_icons/shaded/big-cookie-cutters-shaded.png">
-                        <p class="image-description centered-text"> A big cookie </p>
-                    </div>
-                </div>
-
-                <img class="media-50" src="images/big-cookie-cutters/cookie_cuttters.png">
-            </details>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    <div id="experience" class="content">
+        <h1 class="underlined-element"> Experience </h1>
     </div>
+
+    <div id="projects" class="content">
+        <h1 class="underlined-element"> Projects </h1>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <script>
-        const parents = document.getElementsByClassName("duplicate-child");
-        for (p of parents) {
-            p.appendChild(p.children[0].cloneNode(true));
+        function goToSite(url) {
+            open(url, "_blank");
         }
+
+        function goToSection(url) {
+            open(url, "_self");
+        }
+    </script>
+
+    <script>
+        const DEFAULT_DESCRIPTION = "<p>Hi there, I'm still working on the description for this section! In the meantime, feel free to enjoy these pictures and to email me at <a>scheidlercai@gmail.com</a> to learn more about this section!</p>"
+        function createHappeningBuilder(gallery, section) {
+            return async function createHappening(happening_id) {
+                const happening_json = await fetch(`./resources/json/happenings/${happening_id}.json`)
+                    .then(response => response.json());
+                    
+                const happening_thumbnail = document.createElement('div');
+                happening_thumbnail.classList.add("happening-thumbnail");
+                happening_thumbnail.innerHTML = 
+                `
+                <h2 class="happening-thumbnail__title"> ${happening_json.title} </h2>
+                <img onclick="goToSection('#${happening_id}')" src="${happening_json.src}">     
+                `;
+                gallery.appendChild(happening_thumbnail);
+
+                const happening_entry = document.createElement('details');
+                happening_entry.classList.add("happening");
+                happening_entry.classList.add("boxed-element");
+                happening_entry.name = "happenings";
+                happening_entry.id = happening_id;
+                let happening_entry_innerHTML = 
+                `
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> ${happening_json.title} </h2>
+                    <h3 class="subtle"> ${happening_json.occurred} </h3>
+                </summary>
+                
+                <div class="important-links">
+                `;
+                for (const [link_name, link] of Object.entries(happening_json.links)) {
+                    happening_entry_innerHTML += `<button onclick="goToSite('${link}')"> ${link_name} </button>`;
+                }
+                happening_entry_innerHTML += "</div>";
+
+                happening_entry_innerHTML += '<div class="happening__content">';
+                const happening_html = await fetch(`./resources/html/happenings/${happening_json.content}.html`)
+                    .then(response => response.text()); 
+                happening_entry_innerHTML += happening_html;
+                happening_entry_innerHTML += "</div>";
+                happening_entry.innerHTML = happening_entry_innerHTML;
+                section.appendChild(happening_entry);
+            }
+        }
+
+        let experience_list = [
+            "stem-tutoring",
+            "wec-and-weg", 
+            "caee",
+            "thecoderschool",
+            "venture-valley",
+        ];
+
+        const project_list = [
+            "combat-robotics",
+            "crbbot",  
+            "combat-robotics-learning-resources",
+            "cs61a",
+            "i-dont-node",
+            "physical-digital-darts", 
+            "a-telescoping-phone-holder",
+            "zeroth-responder",
+            "semicolon-john-denero",
+            "integrordle",
+            "golfd",
+            "somni",
+            "doodle-dogs",
+            "ftc",
+            "mr-monrovia",
+            "masa-robot-arm",
+            "headphone-hangers",
+            "big-keyboard-keys",
+            "big-cookie-cutters"
+        ];
+
+        const experience_gallery = document.getElementById("experience-gallery");
+        const experience = document.getElementById("experience");
+
+        const project_gallery = document.getElementById("project-gallery");
+        const projects = document.getElementById("projects");
+
+        async function populatePage() {
+            const experience_builder = createHappeningBuilder(experience_gallery, experience);
+            for (e of experience_list) { 
+                await experience_builder(e);
+            }
+
+            const project_builder = createHappeningBuilder(project_gallery, projects);
+            for (p of project_list) { 
+                await project_builder(p);
+            }
+        }
+        populatePage().then(() => {
+            const galleries = document.getElementsByClassName("gallery");
+            for (const g of galleries) {
+                for (const c of [...g.children]) {
+                    g.appendChild(c.cloneNode(true));
+                }
+            }
+        })
     </script>
 </body>
 </html>

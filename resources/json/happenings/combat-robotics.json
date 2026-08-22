@@ -1,0 +1,11 @@
+{
+    "title": "Combat Robotics & Donuts",
+    "src": "./resources/images/happening_icons/shaded/combat-robotics-shaded.png",
+    "occurred": "Aug 2025 - <span class='gold'>PRESENT</span>",
+    "links": {
+        "Code": "https://github.com/Slipperee-CODE/DONUT_MELT",
+        "CAD": "https://combatroboticsatberkeley.onshape.com/documents/16533c92e9f0871695167333/w/ff9ce30b739def2b802004f4/e/43c744d305fc84205cb7e3d5?aa=true&configuration=List_IgPClAYf69Zvzt%3DTooth&renderMode=0&uiState=6a8a094d5d478301f2ed54b4",
+        "CRB": "https://combatrobotics.studentorg.berkeley.edu/"
+    },
+    "content": "combat-robotics"
+}

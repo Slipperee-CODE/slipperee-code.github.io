@@ -1,0 +1,9 @@
+{
+    "title": "A Human Arm Controlled Robot Arm",
+    "src": "./resources/images/happening_icons/shaded/masa-robot-arm-shaded.png",
+    "occurred": "May 2024",
+    "links": {
+        "Code": "https://github.com/Slipperee-CODE/ArmControlledTurret"
+    },
+    "content": "masa-robot-arm"
+}
