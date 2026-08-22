@@ -20,10 +20,11 @@
         </div>
 
         <div class="important-links">
-            <button onclick="goToSite('https://github.com/Slipperee-CODE')" id="github-button"> GitHub </button> </a>
-            <button onclick="goToSite('https://www.linkedin.com/in/caischeidler/')" id="linkedin-button"> LinkedIn </button> </a>
-            <button onclick="goToSite('Cai Scheidler Resume.pdf')" id="resume-button"> Resume </button> </a>
-            <button onclick="goToSite('https://www.youtube.com/@slipperee_slime')" id="youtube-button"> YouTube </button> </a>
+            <button onclick="goToSite('https://github.com/Slipperee-CODE')" id="github-button"> GitHub </button> 
+            <button onclick="goToSite('https://www.linkedin.com/in/caischeidler/')" id="linkedin-button"> LinkedIn </button>
+            <button onclick="goToSite('Cai Scheidler Resume.pdf')" id="resume-button"> Resume </button>
+            <button onclick="goToSite('https://www.youtube.com/@slipperee_slime')" id="youtube-button"> YouTube </button>
+            <!-- <button onclick="goToSite('https://slipperee-code.github.io/61A')" id="github-button"> CS61A Resources </button> -->
         </div>
 
         <div class="about-me">
@@ -36,7 +37,7 @@
                     <p class="with-vertical-margin"> Feel free to email me at <a>scheidlercai@gmail.com</a> if you want to discuss combat robotics, ask a question about one of my projects, or anything else! </p>
                     <br>
                     <p class="subtle with-vertical-margin"> This image is of me and <a target="_blank" rel="noopener noreferrer" href="https://www2.eecs.berkeley.edu/Faculty/Homepages/denero.html">John DeNero</a>, my CS61A professor.</p>
-                    <p class="subtle with-vertical-margin"> I got 2nd in an art contest by <a href="#semicolon_john_denero"> drawing him out of semicolons.</a> </p>
+                    <p class="subtle with-vertical-margin"> I got 2nd in an art contest by <a href="#semicolon-john-denero"> drawing him out of semicolons.</a> </p>
                 </div>
             </div>
         </div> 
@@ -85,7 +86,7 @@
         const DEFAULT_DESCRIPTION = "<p>Hi there, I'm still working on the description for this section! In the meantime, feel free to enjoy these pictures and to email me at <a>scheidlercai@gmail.com</a> to learn more about this section!</p>"
         function createHappeningBuilder(gallery, section) {
             return async function createHappening(happening_id) {
-                const happening_json = await fetch(`./resources/json/${happening_id}.json`)
+                const happening_json = await fetch(`./resources/json/happenings/${happening_id}.json`)
                     .then(response => response.json())
                     .then(data => {
                         const happening_thumbnail = document.createElement('div');
@@ -115,23 +116,20 @@
                         for (const [link_name, link] of Object.entries(data.links)) {
                             happening_entry_innerHTML += `<button onclick="goToSite('${link}')"> ${link_name} </button>`;
                         }
-                        happening_entry_innerHTML += 
-                        `
-                        </div>
 
-                        // Fetch the content from the external HTML file
-                        // fetch('content.html')
-                        // .then(response => response.text()) // Convert the response data to a text string
-                        // .then(html => {
-                        //    // Inject the HTML into a specific container element
-                        //    document.getElementById('content-container').innerHTML = html;
-                        // })
-                        // .catch(error => console.error('Error loading HTML:', error));
+                        happening_entry_innerHTML += '<div class="happening__content">'
+                        
+                        if (`./resources/html/happenings/${data.content}.html`) {
+                            fetch(data.content)
+                            .then(response => response.text()) 
+                            .then(html => {
+                            happening_entry_innerHTML += html;
+                            })
+                            // .catch(error => console.error('Error loading HTML:', error));
+                        }
 
-                        <div class="happening__content">
-                            ${data.content ? data.content : DEFAULT_DESCRIPTION}
-                        </div>     
-                        `;
+                        happening_entry_innerHTML += "</div>"
+
                         happening_entry.innerHTML = happening_entry_innerHTML;
                         section.appendChild(happening_entry);
                 }); //.catch(error => console.error("Error parsing happening JSONs"));

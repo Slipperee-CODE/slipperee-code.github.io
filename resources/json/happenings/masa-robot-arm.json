@@ -1,10 +1,10 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "A Human Arm Controlled Robot Arm",
+    "src": "./resources/images/happening_icons/shaded/masa-robot-arm-shaded.png",
+    "occurred": "May 2024",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Code": "https://github.com/Slipperee-CODE/ArmControlledTurret",
+        "CAD": ""
     },
-    "content":""
+    "content": "masa-robot-arm"
 }

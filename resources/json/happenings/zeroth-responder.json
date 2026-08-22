@@ -1,10 +1,9 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Zeroth Responder",
+    "src": "./resources/images/happening_icons/shaded/zeroth-responder-shaded.png",
+    "occurred": "Apr 2026",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Design Document": "https://docs.google.com/presentation/d/1enS69dIbFPd3c31iNewE9B95djRrHfjgcJUzc1VxJbI/edit?usp=sharing"
     },
-    "content":""
+    "content": "zeroth-responder"
 }

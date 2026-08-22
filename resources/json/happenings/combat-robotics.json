@@ -1,10 +1,16 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Combat Robotics & Donuts",
+    "src": "./resources/images/happening_icons/shaded/combat-robotics-shaded.png",
+    "occurred": "Aug 2025 - PRESENT",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Code": "https://github.com/Slipperee-CODE/DONUT_MELT",
+        "CAD": "",
+        "PCB": "",
+        "Fights": "",
+        "Doom": "",
+        "Despair": "",
+        "CRB": "",
+        "Melty Discord": ""
     },
-    "content":""
+    "content": "combat-robotics"
 }

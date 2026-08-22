@@ -1,10 +1,9 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Big Keyboard Keys",
+    "src": "./resources/images/happening_icons/shaded/big-keyboard-keys-shaded.png",
+    "occurred": "Apr 2025",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "CAD": ""
     },
-    "content":""
+    "content": "big-keyboard-keys"
 }

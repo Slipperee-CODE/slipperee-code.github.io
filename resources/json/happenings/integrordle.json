@@ -1,10 +1,9 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Integrordle",
+    "src": "./resources/images/happening_icons/shaded/integrordle-shaded.png",
+    "occurred": "May 2024",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Code": "https://github.com/Slipperee-CODE/Integrordle"
     },
-    "content":""
+    "content": "integrordle"
 }

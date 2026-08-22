@@ -1,10 +1,12 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "First Tech Challenge",
+    "src": "./resources/images/happening_icons/shaded/ftc-shaded.png",
+    "occurred": "Aug 2018 - July 2025",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Code": "https://github.com/Slipperee-CODE/4625-FTC-IntoTheDeep",
+        "CAD": "",
+        "FTC Scout": "https://ftcscout.org/teams/4625?season=2024",
+        "FTC's Website": "https://www.firstinspires.org/programs/ftc/"
     },
-    "content":""
+    "content": "ftc"
 }

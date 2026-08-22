@@ -1,10 +1,9 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Mr. Monrovia",
+    "src": "./resources/images/happening_icons/shaded/mr-monrovia-shaded.png",
+    "occurred": "Apr 2025",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Educational Parody Songs That I Have Made": "https://www.youtube.com/watch?v=kLS_c7PtbTs&list=PL7FUgfqI9U4wRM_m0vOH-_gBd_87ZLRQG"
     },
-    "content":""
+    "content": "mr-monrovia"
 }

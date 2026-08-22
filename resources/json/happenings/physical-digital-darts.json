@@ -1,10 +1,11 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Physical Digital Darts",
+    "src": "./resources/images/happening_icons/shaded/physical-digital-darts-shaded.png",
+    "occurred": "Oct 2025",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Code": "https://github.com/commonkestrel/physical-digital-darts",
+        "Devpost Submission": "https://devpost.com/software/digital-physical-darts-wii-darts",
+        "CalHacks' Website": "https://www.calhacks.io/"
     },
-    "content":""
+    "content": "physical-digital-darts"
 }

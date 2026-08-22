@@ -1,10 +1,10 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Venture Valley | Content Creator & QA",
+    "src": "./resources/images/happening_icons/shaded/venture-valley-shaded.png",
+    "occurred": "Jun 2023 - Feb 2024",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Venture Valley's Website": "https://venturevalleygame.com/",
+        "Videos I Made": "https://www.youtube.com/watch?v=VnPnEjpn0OM&list=PLa-pT-wJtNNk"
     },
-    "content":""
+    "content": "venture-valley"
 }

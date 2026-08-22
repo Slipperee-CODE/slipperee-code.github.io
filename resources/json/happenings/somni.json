@@ -1,10 +1,10 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Somni",
+    "src": "./resources/images/happening_icons/shaded/somni-shaded.png",
+    "occurred": "Aug 2023 - Aug 2024",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Code": "https://github.com/acarlson777/Somnia2024",
+        "iOS App Store": "https://apps.apple.com/us/app/somn%C3%AF/id6474272770"
     },
-    "content":""
+    "content": "somni"
 }

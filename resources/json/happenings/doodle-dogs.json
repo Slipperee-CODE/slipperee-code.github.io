@@ -1,10 +1,11 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "Doodle Dogs",
+    "src": "./resources/images/happening_icons/shaded/doodle-dogs-shaded.png",
+    "occurred": "Aug 2022 - Aug 2023",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "Code": "https://github.com/LarryHellen/DoodleDogs",
+        "iOS App Store": "https://apps.apple.com/us/app/doodledogs/id6443924814",
+        "Congressional App Challenge": "https://www.congressionalappchallenge.us/23-ca31/"
     },
-    "content":""
+    "content": "doodle-dogs"
 }

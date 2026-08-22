@@ -1,10 +1,9 @@
 {
-    "title":"CAEE | CS + Math Tutor",
-    "src":"./resources/project_icons/shaded/caee-shaded.png",
-    "occurred":"Jan 2026 - PRESENT",
+    "title": "theCoderSchool | Code Coach",
+    "src": "./resources/images/happening_icons/shaded/thecoderschool-shaded.png",
+    "occurred": "Jul 2024 - Jul 2025",
     "links": {
-        "CAEE's Website #1": "https://engineering.berkeley.edu/students/academic-support/",
-        "CAEE's Website #2": "https://engineering.berkeley.edu/students/academic-support/"
+        "theCoderSchool's Website": "https://www.thecoderschool.com/"
     },
-    "content":""
+    "content": "thecoderschool"
 }
