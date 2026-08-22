@@ -48,6 +48,54 @@ body {
     padding: 0.5rem;
 }
 
+/* 
+old classes from previous version of website, 
+porting them over so that project descriptions will work for now
+*/
+.centered-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.centered-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.with-gap {
+    gap: 0.5rem;
+}
+
+.media-100 {
+    max-width: 100%;
+    width: 100%;
+}
+
+.media-66 {
+    max-width: 65.5%;
+    width: 65.5%;
+}
+
+.media-50 {
+    max-width: 49.5%;
+    width: 49.5%;
+}
+
+.media-33 {
+    max-width: 32.5%;
+    width: 32.5%;
+}
+
+.media-25 {
+    max-width: 24.5%;
+    width: 24.5%;
+}
+/* 
+end of old classes from previous version of website
+*/
+
 .header {
     display: flex;
     flex-direction: row;

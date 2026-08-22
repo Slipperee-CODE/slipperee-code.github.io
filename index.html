@@ -98,7 +98,6 @@
                         `;
                         gallery.appendChild(happening_thumbnail);
 
-
                         const happening_entry = document.createElement('details');
                         happening_entry.classList.add("happening");
                         happening_entry.classList.add("boxed-element");
@@ -116,23 +115,18 @@
                         for (const [link_name, link] of Object.entries(data.links)) {
                             happening_entry_innerHTML += `<button onclick="goToSite('${link}')"> ${link_name} </button>`;
                         }
+                        happening_entry_innerHTML += "</div>";
 
-                        happening_entry_innerHTML += '<div class="happening__content">'
-                        
-                        if (`./resources/html/happenings/${data.content}.html`) {
-                            fetch(data.content)
-                            .then(response => response.text()) 
-                            .then(html => {
+                        happening_entry_innerHTML += '<div class="happening__content">';
+                        fetch(`./resources/html/happenings/${data.content}.html`)
+                        .then(response => response.text()) 
+                        .then(html => {
                             happening_entry_innerHTML += html;
-                            })
-                            // .catch(error => console.error('Error loading HTML:', error));
-                        }
-
-                        happening_entry_innerHTML += "</div>"
-
-                        happening_entry.innerHTML = happening_entry_innerHTML;
-                        section.appendChild(happening_entry);
-                }); //.catch(error => console.error("Error parsing happening JSONs"));
+                            happening_entry_innerHTML += "</div>";
+                            happening_entry.innerHTML = happening_entry_innerHTML;
+                            section.appendChild(happening_entry);
+                        });
+                });
             }
         }
 
@@ -155,7 +149,6 @@
             "somni",
             "zeroth-responder"
         ];
-        // project_list.push(...project_list);
 
         let experience_list = [
             "thecoderschool",
@@ -164,7 +157,6 @@
             "stem-tutoring",
             "caee"
         ];
-        // experience_list.push(...experience_list);
 
         const experience_gallery = document.getElementById("experience-gallery");
         const experience = document.getElementById("experience");
