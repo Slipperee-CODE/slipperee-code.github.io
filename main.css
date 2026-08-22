@@ -7,6 +7,7 @@
     --c-hyperlink:#4086ff;
     --c-gray:#6e6e6e;
     --c-gold:#D9B26F;
+    --c-light-gold:#c8a36340;
 
     --c-button:#167D35;
     --c-button-hovered:#0C451D;
@@ -181,6 +182,14 @@ end of old classes from previous version of website
 
 .happening:hover {
     transform: scale(1.05);
+}
+
+.happening:target {
+    background-color: var(--c-light-gold);
+}
+
+.happening:target[open] {
+    background-color: var(--c-bg);
 }
 
 .happening:hover[open] {

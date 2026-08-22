@@ -87,46 +87,43 @@
         function createHappeningBuilder(gallery, section) {
             return async function createHappening(happening_id) {
                 const happening_json = await fetch(`./resources/json/happenings/${happening_id}.json`)
-                    .then(response => response.json())
-                    .then(data => {
-                        const happening_thumbnail = document.createElement('div');
-                        happening_thumbnail.classList.add("happening-thumbnail");
-                        happening_thumbnail.innerHTML = 
-                        `
-                        <h2 class="happening-thumbnail__title"> ${data.title} </h2>
-                        <img onclick="goToSection('#${happening_id}')" src="${data.src}">     
-                        `;
-                        gallery.appendChild(happening_thumbnail);
+                    .then(response => response.json());
+                    
+                const happening_thumbnail = document.createElement('div');
+                happening_thumbnail.classList.add("happening-thumbnail");
+                happening_thumbnail.innerHTML = 
+                `
+                <h2 class="happening-thumbnail__title"> ${happening_json.title} </h2>
+                <img onclick="goToSection('#${happening_id}')" src="${happening_json.src}">     
+                `;
+                gallery.appendChild(happening_thumbnail);
 
-                        const happening_entry = document.createElement('details');
-                        happening_entry.classList.add("happening");
-                        happening_entry.classList.add("boxed-element");
-                        happening_entry.name = "happenings";
-                        happening_entry.id = happening_id;
-                        let happening_entry_innerHTML = 
-                        `
-                        <summary class="happening__summary">
-                            <h2 class="happening__title"> ${data.title} </h2>
-                            <h3 class="subtle"> ${data.occurred} </h3>
-                        </summary>
-                        
-                        <div class="important-links">
-                        `;
-                        for (const [link_name, link] of Object.entries(data.links)) {
-                            happening_entry_innerHTML += `<button onclick="goToSite('${link}')"> ${link_name} </button>`;
-                        }
-                        happening_entry_innerHTML += "</div>";
+                const happening_entry = document.createElement('details');
+                happening_entry.classList.add("happening");
+                happening_entry.classList.add("boxed-element");
+                happening_entry.name = "happenings";
+                happening_entry.id = happening_id;
+                let happening_entry_innerHTML = 
+                `
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> ${happening_json.title} </h2>
+                    <h3 class="subtle"> ${happening_json.occurred} </h3>
+                </summary>
+                
+                <div class="important-links">
+                `;
+                for (const [link_name, link] of Object.entries(happening_json.links)) {
+                    happening_entry_innerHTML += `<button onclick="goToSite('${link}')"> ${link_name} </button>`;
+                }
+                happening_entry_innerHTML += "</div>";
 
-                        happening_entry_innerHTML += '<div class="happening__content">';
-                        fetch(`./resources/html/happenings/${data.content}.html`)
-                        .then(response => response.text()) 
-                        .then(html => {
-                            happening_entry_innerHTML += html;
-                            happening_entry_innerHTML += "</div>";
-                            happening_entry.innerHTML = happening_entry_innerHTML;
-                            section.appendChild(happening_entry);
-                        });
-                });
+                happening_entry_innerHTML += '<div class="happening__content">';
+                const happening_html = await fetch(`./resources/html/happenings/${happening_json.content}.html`)
+                    .then(response => response.text()); 
+                happening_entry_innerHTML += happening_html;
+                happening_entry_innerHTML += "</div>";
+                happening_entry.innerHTML = happening_entry_innerHTML;
+                section.appendChild(happening_entry);
             }
         }
 
@@ -164,7 +161,17 @@
         const project_gallery = document.getElementById("project-gallery");
         const projects = document.getElementById("projects");
 
-        experience_list.forEach(createHappeningBuilder(experience_gallery, experience)); 
-        project_list.forEach(createHappeningBuilder(project_gallery, projects));
+        async function populatePage() {
+            await Promise.all(experience_list.map(createHappeningBuilder(experience_gallery, experience)));
+            await Promise.all(project_list.map(createHappeningBuilder(project_gallery, projects)));
+
+            const galleries = document.getElementsByClassName("gallery");
+            for (const g of galleries) {
+                for (const c of [...g.children]) { // snapshot first!
+                    g.appendChild(c.cloneNode(true));
+                }
+            }
+        }
+        populatePage();
     </script>
 </body>
