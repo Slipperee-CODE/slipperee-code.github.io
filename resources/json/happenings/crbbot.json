@@ -1,7 +1,7 @@
 {
     "title": "CRBBot",
     "src": "./resources/images/happening_icons/shaded/crbbot-shaded.png",
-    "occurred": "June 2026 - PRESENT",
+    "occurred": "June 2026 - <span class='gold'>PRESENT</span>",
     "links": {
         "Code": "https://github.com/combatroboticsberkeley/CRBBot"
     },

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,32 +128,34 @@
             }
         }
 
-        const project_list = [
-            "a-telescoping-phone-holder",
-            "big-cookie-cutters",
-            "big-keyboard-keys",
-            "combat-robotics-learning-resources",
-            "combat-robotics",
-            "crbbot",
-            "doodle-dogs",
-            "ftc",
-            "golfd",
-            "headphone-hangers",
-            "i-dont-node",
-            "integrordle",
-            "masa-robot-arm",
-            "mr-monrovia",
-            "physical-digital-darts",
-            "somni",
-            "zeroth-responder"
-        ];
-
         let experience_list = [
+            "stem-tutoring",
+            "wec-and-weg", 
+            "caee",
             "thecoderschool",
             "venture-valley",
-            "wec-and-weg", 
-            "stem-tutoring",
-            "caee"
+        ];
+
+        const project_list = [
+            "combat-robotics",
+            "crbbot",  
+            "combat-robotics-learning-resources",
+            "cs61a",
+            "i-dont-node",
+            "physical-digital-darts", 
+            "a-telescoping-phone-holder",
+            "zeroth-responder",
+            "semicolon-john-denero",
+            "integrordle",
+            "golfd",
+            "somni",
+            "doodle-dogs",
+            "ftc",
+            "mr-monrovia",
+            "masa-robot-arm",
+            "headphone-hangers",
+            "big-keyboard-keys",
+            "big-cookie-cutters"
         ];
 
         const experience_gallery = document.getElementById("experience-gallery");
@@ -162,16 +165,24 @@
         const projects = document.getElementById("projects");
 
         async function populatePage() {
-            await Promise.all(experience_list.map(createHappeningBuilder(experience_gallery, experience)));
-            await Promise.all(project_list.map(createHappeningBuilder(project_gallery, projects)));
+            const experience_builder = createHappeningBuilder(experience_gallery, experience);
+            for (e of experience_list) { 
+                await experience_builder(e);
+            }
 
+            const project_builder = createHappeningBuilder(project_gallery, projects);
+            for (p of project_list) { 
+                await project_builder(p);
+            }
+        }
+        populatePage().then(() => {
             const galleries = document.getElementsByClassName("gallery");
             for (const g of galleries) {
-                for (const c of [...g.children]) { // snapshot first!
+                for (const c of [...g.children]) {
                     g.appendChild(c.cloneNode(true));
                 }
             }
-        }
-        populatePage();
+        })
     </script>
 </body>
+</html>

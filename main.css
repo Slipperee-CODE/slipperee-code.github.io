@@ -127,19 +127,28 @@ end of old classes from previous version of website
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: max-content;
 }
 
+/* #experience-gallery .happening-thumbnail {
+    margin: 0.5rem 5rem;
+}
+
+#project-gallery .happening-thumbnail {
+    margin: 0.5rem;
+} */
+
 .slide-right {
-    animation: slide-right 25s linear normal infinite backwards;    
+    animation: slide-right 20s linear normal infinite backwards;    
 }
 
 .slide-left {    
-    animation: slide-right 20s linear reverse infinite backwards;    
+    animation: slide-right 25s linear reverse infinite backwards;    
 }
 
 @keyframes slide-right {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 
     100% {
@@ -153,7 +162,7 @@ end of old classes from previous version of website
     width: 20rem;
     height: 20rem;
 
-    margin: 0.5rem;
+    margin: 0.5rem 0;
 
     /* background-color: #DF2935; */
 
