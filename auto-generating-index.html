@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cai's Portfolio</title>
+    <meta name="description" content="The wonderful homepage of Cai Scheidler's (a.k.a. Slipperee-CODE's) portfolio website.">
+    <link rel="icon" type="image/x-icon" href="./resources/me.png">
+
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+</head>
+<body>
+    <div class="content">
+        <div class="header underlined-element">
+            <h1> Cai Scheidler </h1>
+            <h2> scheidlercai@gmail.com </h2>
+        </div>
+
+        <div class="important-links">
+            <button onclick="goToSite('https://github.com/Slipperee-CODE')" id="github-button"> GitHub </button> 
+            <button onclick="goToSite('https://www.linkedin.com/in/caischeidler/')" id="linkedin-button"> LinkedIn </button>
+            <button onclick="goToSite('Cai Scheidler Resume.pdf')" id="resume-button"> Resume </button>
+            <button onclick="goToSite('https://www.youtube.com/@slipperee_slime')" id="youtube-button"> YouTube </button>
+            <!-- <button onclick="goToSite('https://slipperee-code.github.io/61A')" id="github-button"> CS61A Resources </button> -->
+        </div>
+
+        <div class="about-me">
+            <h1 class="underlined-element"> About Me </h1>
+            <div class="about-me__content">
+                <img src="resources/me.png" width="200px" height="200px">
+                <div>
+                    <p class="with-vertical-margin"> Hi there, I'm Cai Scheidler! </p>
+                    <p class="with-vertical-margin"> I enjoy teaching, building software & hardware systems, and learning! </p>    
+                    <p class="with-vertical-margin"> Feel free to email me at <a>scheidlercai@gmail.com</a> if you want to discuss combat robotics, ask a question about one of my projects, or anything else! </p>
+                    <br>
+                    <p class="subtle with-vertical-margin"> This image is of me and <a target="_blank" rel="noopener noreferrer" href="https://www2.eecs.berkeley.edu/Faculty/Homepages/denero.html">John DeNero</a>, my CS61A professor.</p>
+                    <p class="subtle with-vertical-margin"> I got 2nd in an art contest by <a href="#semicolon-john-denero"> drawing him out of semicolons.</a> </p>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <h1 class="content underlined-element"> Experience Gallery </h1>
+    <div id="experience-gallery" class="gallery slide-left"> </div>
+
+    <h1 class="content underlined-element"> Project Gallery </h1>
+    <div id="project-gallery" class="gallery slide-right"> </div>
+    
+    <div id="experience" class="content">
+        <h1 class="underlined-element"> Experience </h1>
+    </div>
+
+    <div id="projects" class="content">
+        <h1 class="underlined-element"> Projects </h1>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        function goToSite(url) {
+            open(url, "_blank");
+        }
+
+        function goToSection(url) {
+            open(url, "_self");
+        }
+    </script>
+
+    <script>
+        const DEFAULT_DESCRIPTION = "<p>Hi there, I'm still working on the description for this section! In the meantime, feel free to enjoy these pictures and to email me at <a>scheidlercai@gmail.com</a> to learn more about this section!</p>"
+        function createHappeningBuilder(gallery, section) {
+            return async function createHappening(happening_id) {
+                const happening_json = await fetch(`./resources/json/happenings/${happening_id}.json`)
+                    .then(response => response.json());
+                    
+                const happening_thumbnail = document.createElement('div');
+                happening_thumbnail.classList.add("happening-thumbnail");
+                happening_thumbnail.innerHTML = 
+                `
+                <h2 class="happening-thumbnail__title"> ${happening_json.title} </h2>
+                <img onclick="goToSection('#${happening_id}')" src="${happening_json.src}">     
+                `;
+                gallery.appendChild(happening_thumbnail);
+
+                const happening_entry = document.createElement('details');
+                happening_entry.classList.add("happening");
+                happening_entry.classList.add("boxed-element");
+                happening_entry.name = "happenings";
+                happening_entry.id = happening_id;
+                let happening_entry_innerHTML = 
+                `
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> ${happening_json.title} </h2>
+                    <h3 class="subtle"> ${happening_json.occurred} </h3>
+                </summary>
+                
+                <div class="important-links">
+                `;
+                for (const [link_name, link] of Object.entries(happening_json.links)) {
+                    happening_entry_innerHTML += `<button onclick="goToSite('${link}')"> ${link_name} </button>`;
+                }
+                happening_entry_innerHTML += "</div>";
+
+                happening_entry_innerHTML += '<div class="happening__content">';
+                const happening_html = await fetch(`./resources/html/happenings/${happening_json.content}.html`)
+                    .then(response => response.text()); 
+                happening_entry_innerHTML += happening_html;
+                happening_entry_innerHTML += "</div>";
+                happening_entry.innerHTML = happening_entry_innerHTML;
+                section.appendChild(happening_entry);
+            }
+        }
+
+        let experience_list = [
+            "stem-tutoring",
+            "wec-and-weg", 
+            "caee",
+            "thecoderschool",
+            "venture-valley",
+        ];
+
+        const project_list = [
+            "combat-robotics",
+            "crbbot",  
+            "combat-robotics-learning-resources",
+            "cs61a",
+            "i-dont-node",
+            "physical-digital-darts", 
+            "a-telescoping-phone-holder",
+            "zeroth-responder",
+            "semicolon-john-denero",
+            "integrordle",
+            "golfd",
+            "somni",
+            "doodle-dogs",
+            "ftc",
+            "mr-monrovia",
+            "masa-robot-arm",
+            "headphone-hangers",
+            "big-keyboard-keys",
+            "big-cookie-cutters"
+        ];
+
+        const experience_gallery = document.getElementById("experience-gallery");
+        const experience = document.getElementById("experience");
+
+        const project_gallery = document.getElementById("project-gallery");
+        const projects = document.getElementById("projects");
+
+        async function populatePage() {
+            const experience_builder = createHappeningBuilder(experience_gallery, experience);
+            for (e of experience_list) { 
+                await experience_builder(e);
+            }
+
+            const project_builder = createHappeningBuilder(project_gallery, projects);
+            for (p of project_list) { 
+                await project_builder(p);
+            }
+        }
+        populatePage().then(() => {
+            const galleries = document.getElementsByClassName("gallery");
+            for (const g of galleries) {
+                for (const c of [...g.children]) {
+                    g.appendChild(c.cloneNode(true));
+                }
+            }
+        })
+    </script>
+</body>
+</html>

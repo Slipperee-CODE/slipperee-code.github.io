@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cai's Portfolio</title>
@@ -10,8 +8,8 @@
     <link rel="stylesheet" href="main.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css?family=DM Sans" rel="stylesheet">
 </head>
 <body>
     <div class="content">
@@ -34,7 +32,7 @@
                 <img src="resources/me.png" width="200px" height="200px">
                 <div>
                     <p class="with-vertical-margin"> Hi there, I'm Cai Scheidler! </p>
-                    <p class="with-vertical-margin"> I enjoy teaching, building software & hardware systems, and learning! </p>    
+                    <p class="with-vertical-margin"> I enjoy teaching, building software &amp; hardware systems, and learning! </p>    
                     <p class="with-vertical-margin"> Feel free to email me at <a>scheidlercai@gmail.com</a> if you want to discuss combat robotics, ask a question about one of my projects, or anything else! </p>
                     <br>
                     <p class="subtle with-vertical-margin"> This image is of me and <a target="_blank" rel="noopener noreferrer" href="https://www2.eecs.berkeley.edu/Faculty/Homepages/denero.html">John DeNero</a>, my CS61A professor.</p>
@@ -45,18 +43,637 @@
     </div>
 
     <h1 class="content underlined-element"> Experience Gallery </h1>
-    <div id="experience-gallery" class="gallery slide-left"> </div>
+    <div id="experience-gallery" class="gallery slide-left"> <div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Freelance | STEM Tutor </h2>
+                <img onclick="goToSection('#stem-tutoring')" src="./resources/images/happening_icons/shaded/stem-tutoring-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> WEC &amp; WEG | Technical Intern </h2>
+                <img onclick="goToSection('#wec-and-weg')" src="./resources/images/happening_icons/shaded/wec-and-weg-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> CAEE | CS + Math Tutor </h2>
+                <img onclick="goToSection('#caee')" src="./resources/images/happening_icons/shaded/caee-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> theCoderSchool | Code Coach </h2>
+                <img onclick="goToSection('#thecoderschool')" src="./resources/images/happening_icons/shaded/thecoderschool-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Venture Valley | Content Creator &amp; QA </h2>
+                <img onclick="goToSection('#venture-valley')" src="./resources/images/happening_icons/shaded/venture-valley-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Freelance | STEM Tutor </h2>
+                <img onclick="goToSection('#stem-tutoring')" src="./resources/images/happening_icons/shaded/stem-tutoring-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> WEC &amp; WEG | Technical Intern </h2>
+                <img onclick="goToSection('#wec-and-weg')" src="./resources/images/happening_icons/shaded/wec-and-weg-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> CAEE | CS + Math Tutor </h2>
+                <img onclick="goToSection('#caee')" src="./resources/images/happening_icons/shaded/caee-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> theCoderSchool | Code Coach </h2>
+                <img onclick="goToSection('#thecoderschool')" src="./resources/images/happening_icons/shaded/thecoderschool-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Venture Valley | Content Creator &amp; QA </h2>
+                <img onclick="goToSection('#venture-valley')" src="./resources/images/happening_icons/shaded/venture-valley-shaded.png">     
+                </div></div>
 
     <h1 class="content underlined-element"> Project Gallery </h1>
-    <div id="project-gallery" class="gallery slide-right"> </div>
+    <div id="project-gallery" class="gallery slide-right"> <div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Combat Robotics &amp; Donuts </h2>
+                <img onclick="goToSection('#combat-robotics')" src="./resources/images/happening_icons/shaded/combat-robotics-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> CRBBot </h2>
+                <img onclick="goToSection('#crbbot')" src="./resources/images/happening_icons/shaded/crbbot-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Combat Robotics Learning Resources </h2>
+                <img onclick="goToSection('#combat-robotics-learning-resources')" src="./resources/images/happening_icons/shaded/combat-robotics-learning-resources-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> CS61A Resources </h2>
+                <img onclick="goToSection('#cs61a')" src="./resources/images/happening_icons/shaded/cs61a-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> I Don't Node </h2>
+                <img onclick="goToSection('#i-dont-node')" src="./resources/images/happening_icons/shaded/i-dont-node-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Physical Digital Darts </h2>
+                <img onclick="goToSection('#physical-digital-darts')" src="./resources/images/happening_icons/shaded/physical-digital-darts-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> A Telescoping Phone Holder </h2>
+                <img onclick="goToSection('#a-telescoping-phone-holder')" src="./resources/images/happening_icons/shaded/a-telescoping-phone-holder-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Zeroth Responder </h2>
+                <img onclick="goToSection('#zeroth-responder')" src="./resources/images/happening_icons/shaded/zeroth-responder-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Semicolon John DeNero </h2>
+                <img onclick="goToSection('#semicolon-john-denero')" src="./resources/images/happening_icons/shaded/semicolon-john-denero-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Integrordle </h2>
+                <img onclick="goToSection('#integrordle')" src="./resources/images/happening_icons/shaded/integrordle-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Golf'd </h2>
+                <img onclick="goToSection('#golfd')" src="./resources/images/happening_icons/shaded/golfd-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Somni </h2>
+                <img onclick="goToSection('#somni')" src="./resources/images/happening_icons/shaded/somni-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Doodle Dogs </h2>
+                <img onclick="goToSection('#doodle-dogs')" src="./resources/images/happening_icons/shaded/doodle-dogs-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> First Tech Challenge </h2>
+                <img onclick="goToSection('#ftc')" src="./resources/images/happening_icons/shaded/ftc-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Mr. Monrovia </h2>
+                <img onclick="goToSection('#mr-monrovia')" src="./resources/images/happening_icons/shaded/mr-monrovia-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> A Human Arm Controlled Robot Arm </h2>
+                <img onclick="goToSection('#masa-robot-arm')" src="./resources/images/happening_icons/shaded/masa-robot-arm-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Headphone Hangers </h2>
+                <img onclick="goToSection('#headphone-hangers')" src="./resources/images/happening_icons/shaded/headphone-hangers-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Big Keyboard Keys </h2>
+                <img onclick="goToSection('#big-keyboard-keys')" src="./resources/images/happening_icons/shaded/big-keyboard-keys-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Big Cookie Cutters </h2>
+                <img onclick="goToSection('#big-cookie-cutters')" src="./resources/images/happening_icons/shaded/big-cookie-cutters-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Combat Robotics &amp; Donuts </h2>
+                <img onclick="goToSection('#combat-robotics')" src="./resources/images/happening_icons/shaded/combat-robotics-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> CRBBot </h2>
+                <img onclick="goToSection('#crbbot')" src="./resources/images/happening_icons/shaded/crbbot-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Combat Robotics Learning Resources </h2>
+                <img onclick="goToSection('#combat-robotics-learning-resources')" src="./resources/images/happening_icons/shaded/combat-robotics-learning-resources-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> CS61A Resources </h2>
+                <img onclick="goToSection('#cs61a')" src="./resources/images/happening_icons/shaded/cs61a-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> I Don't Node </h2>
+                <img onclick="goToSection('#i-dont-node')" src="./resources/images/happening_icons/shaded/i-dont-node-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Physical Digital Darts </h2>
+                <img onclick="goToSection('#physical-digital-darts')" src="./resources/images/happening_icons/shaded/physical-digital-darts-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> A Telescoping Phone Holder </h2>
+                <img onclick="goToSection('#a-telescoping-phone-holder')" src="./resources/images/happening_icons/shaded/a-telescoping-phone-holder-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Zeroth Responder </h2>
+                <img onclick="goToSection('#zeroth-responder')" src="./resources/images/happening_icons/shaded/zeroth-responder-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Semicolon John DeNero </h2>
+                <img onclick="goToSection('#semicolon-john-denero')" src="./resources/images/happening_icons/shaded/semicolon-john-denero-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Integrordle </h2>
+                <img onclick="goToSection('#integrordle')" src="./resources/images/happening_icons/shaded/integrordle-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Golf'd </h2>
+                <img onclick="goToSection('#golfd')" src="./resources/images/happening_icons/shaded/golfd-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Somni </h2>
+                <img onclick="goToSection('#somni')" src="./resources/images/happening_icons/shaded/somni-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Doodle Dogs </h2>
+                <img onclick="goToSection('#doodle-dogs')" src="./resources/images/happening_icons/shaded/doodle-dogs-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> First Tech Challenge </h2>
+                <img onclick="goToSection('#ftc')" src="./resources/images/happening_icons/shaded/ftc-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Mr. Monrovia </h2>
+                <img onclick="goToSection('#mr-monrovia')" src="./resources/images/happening_icons/shaded/mr-monrovia-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> A Human Arm Controlled Robot Arm </h2>
+                <img onclick="goToSection('#masa-robot-arm')" src="./resources/images/happening_icons/shaded/masa-robot-arm-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Headphone Hangers </h2>
+                <img onclick="goToSection('#headphone-hangers')" src="./resources/images/happening_icons/shaded/headphone-hangers-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Big Keyboard Keys </h2>
+                <img onclick="goToSection('#big-keyboard-keys')" src="./resources/images/happening_icons/shaded/big-keyboard-keys-shaded.png">     
+                </div><div class="happening-thumbnail">
+                <h2 class="happening-thumbnail__title"> Big Cookie Cutters </h2>
+                <img onclick="goToSection('#big-cookie-cutters')" src="./resources/images/happening_icons/shaded/big-cookie-cutters-shaded.png">     
+                </div></div>
     
     <div id="experience" class="content">
         <h1 class="underlined-element"> Experience </h1>
+    <details class="happening boxed-element" name="happenings" id="stem-tutoring">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Freelance | STEM Tutor </h2>
+                    <h3 class="subtle"> Sep 2024 - <span class="gold">PRESENT</span> </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://slipperee-code.github.io/')"> My Website :D </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
     </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/stem-tutoring-shaded.png">
+        <p class="image-description centered-text"> -x^2, sin(x), &amp; -x</p>
+    </div>
+</div></div></details><details class="happening boxed-element" name="happenings" id="wec-and-weg">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> WEC &amp; WEG | Technical Intern </h2>
+                    <h3 class="subtle"> May 2026 - Aug 2026 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://www.wiredelectriccompany.com/')"> WEC's Website </button><button onclick="goToSite('https://www.wiredentertainmentgroup.com/')"> WEG's Website </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> As an intern at Wired Electric Company (WEC) &amp; Wired Entertainment Group (WEG), I learned a whole lot about what goes into live audio &amp; video production, industrial control panel construction, and mantaining a well-kept inventory system.</p>
+        <br>
+        <p>It was fun to dissect the companies' inventory management system (Rentman) as a way of practicing <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/7zu30DhJLKU?si=ZxlJkwlQM12G3FsN&amp;t=441">working within abstractions.</a></p>  
+        <br>
+        <p>Rentman also taught me that naming &amp; describing settings properly &amp; thoroughly is VERY important (Having the setting "Reserved from stock" have options "Reserved from stock" and "Available outside this combination" feels slightly strange. You also can't really know what the options do until you select and test them).</p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/wec-and-weg-shaded.png">
+        <p class="image-description centered-text">Top: An industrial control panel</p>
+        <p class="image-description centered-text">Bottom: Some AV racks</p>
+    </div>
+</div>
+
+<br>
+
+<p>Here are some fun things I learned: </p>
+<p> - The "Cat" in "Cat6 ethernet cable" stands for "Category." There are different ways ethernet cables are wired (one of which is white-orange, orange, white-green, blue, white-blue, green, white-brown, brown).</p>
+<p> - The "XLR" in "XLR cable" originally stood for "<span class="bold-text">X</span> series connector, with a <span class="bold-text">L</span>atch, and a <span class="bold-text">R</span>esilient rubber compound insulator." </p>
+<p> - The "TRS" in "1/X in. TRS cable" stands for <span class="bold-text">T</span>ip, <span class="bold-text">R</span>ing &amp; <span class="bold-text">S</span>leeve ("1/X in. TS Cable" is just <span class="bold-text">T</span>ip &amp; <span class="bold-text">S</span>leeve) which refers to the 3 separate conductors at the end of the cable. </p>
+<p> - A DMX (Digital Multiplex) "Universe" of 512 channels is a sequence of 512 bytes. Each device takes as many bytes as it needs to be fully controlled (e.g. 1 for brightness, 4 for brightness &amp; RGB color control, etc.) and relays the remaining sequence onwards to the rest of the DMX fixtures. </p>
+</div></details><details class="happening boxed-element" name="happenings" id="caee">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> CAEE | CS + Math Tutor </h2>
+                    <h3 class="subtle"> Jan 2026 - May 2026 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://engineering.berkeley.edu/students/academic-support/')"> CAEE's Website </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> As a tutor at UC Berkeley's Center for Access to Engineering Excellence (CAEE), I help students with:  </p>
+        <p> - Math 51 (Calculus 1) </p>
+        <p> - Math 52 (Calculus 2) </p>
+        <p> - Math 53 (Multivariable Calculus) </p>
+        <p> - Math 54 (Linear Algebra &amp; Differential Equations) </p>
+        <p> - CS61A (Structure and Interpretation of Computer Programs) </p>
+        <p> - CS61B (Data Structures &amp; Algorithms) </p>
+        <br>
+        <p> I believe being a great teacher, requires understanding course content from varying perspectives and approaches. Here's what I've done to practice this skill for myself: </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/caee-shaded.png">
+        <p class="image-description centered-text">A look into the CAEE</p>
+    </div>
+</div>
+<br>
+<p class="bold-text"> For Math 53: </p>
+<p> I made a parody of the Christmas song "Let It Snow! Let It Snow! Let It Snow!" by Dean Martin based around Stokes' Theorem (it's called "Let's use Stokes! Let's use Stokes! Let's use Stokes"). You can watch it <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kLS_c7PtbTs&amp;list=PL7FUgfqI9U4wRM_m0vOH-_gBd_87ZLRQG"> here. </a> </p>
+<br>
+<p class="bold-text"> For CS61B &amp; Math 54: </p>
+<p> I combined linear algebra and Java algorithms to create a 3D renderer from only being able to draw 2D shapes on the screen. </p>
+
+<iframe class="media-66" src="https://www.youtube.com/embed/LN8NYqspKp4" title="3DRenderer Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<p class="subtle"> This project was originally only supposed to be a 2D, grid-based, top-down game. I would link the code but alas I am bound by <a target="_blank" rel="noopener noreferrer" href="https://www2.eecs.berkeley.edu/Faculty/Homepages/joshhug.html"> Josh Hug's</a> syllabus which prohibits <span class="underlined-text">"posting solution code to any assignment in a public place (e.g. a public git repository, Google Drive, Discord, etched into stones above the Mediterranean, etc). This applies even after the semester is over."</span> </p>
+<p class="subtle"> Shoutout <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/owenwjiang"> Owen Jiang</a> for working on the 2D part of this project. </p>
+<p class="subtle"> This project was inspired into existence by <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=qjWkNZ0SXfo">this</a> Tsoding video.</p>
+</div></details><details class="happening boxed-element" name="happenings" id="thecoderschool">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> theCoderSchool | Code Coach </h2>
+                    <h3 class="subtle"> Jul 2024 - Jul 2025 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://www.thecoderschool.com/')"> theCoderSchool's Website </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> As a Code Coach at theCoderSchool, I helped students aged 7-18 learn Python, Scratch, and Unity/C# in summer camps and in 1 hour long, 1 on 2 sessions. Being a Code Coach gave me lots of practice breaking down high-level programming concepts in simpler terms. I've explained velocity, acceleration, and gravity to kids by jumping up and down and running around.</p>
+        <br>
+        <p> If you've trying to teach what functions are to young students, try the <a target="_blank" rel="noopener noreferrer" href="https://scausey.github.io/return-statements-according-to-toast/">Toaster Technique.</a></p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/thecoderschool-shaded.png">
+        <p class="image-description centered-text">A look into theCoderSchool</p>
+    </div>
+</div>
+</div></details><details class="happening boxed-element" name="happenings" id="venture-valley">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Venture Valley | Content Creator &amp; QA </h2>
+                    <h3 class="subtle"> Jun 2023 - Feb 2024 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://venturevalleygame.com/')"> Venture Valley's Website </button><button onclick="goToSite('https://www.youtube.com/watch?v=VnPnEjpn0OM&amp;list=PLa-pT-wJtNNk')"> Videos I Made </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/venture-valley-shaded.png">
+        <p class="image-description centered-text"> A screenshot from one of my videos</p>
+    </div>
+</div>
+</div></details></div>
 
     <div id="projects" class="content">
         <h1 class="underlined-element"> Projects </h1>
+    <details class="happening boxed-element" name="happenings" id="combat-robotics">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Combat Robotics &amp; Donuts </h2>
+                    <h3 class="subtle"> Aug 2025 - <span class="gold">PRESENT</span> </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/Slipperee-CODE/DONUT_MELT')"> Code </button><button onclick="goToSite('https://combatroboticsatberkeley.onshape.com/documents/16533c92e9f0871695167333/w/ff9ce30b739def2b802004f4/e/43c744d305fc84205cb7e3d5?aa=true&amp;configuration=List_IgPClAYf69Zvzt%3DTooth&amp;renderMode=0&amp;uiState=6a8a094d5d478301f2ed54b4')"> CAD </button><button onclick="goToSite('https://combatrobotics.studentorg.berkeley.edu/')"> CRB </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+        <br>
+        <p> Donut of Doom's most recent fights at Berkeley Bot Bash 2026 can be found here: </p>
+        <p> - <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/fAmobOCuXes">Fight #1</a></p>
+        <p> - <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/FZXLn6lfBFI">Fight #2</a></p>
+        <p> - <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/s7dslklJbyw">Fight #3</a></p>
+        <p> - <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/urRS_H-3zx0">Fight #4</a></p>
     </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/combat-robotics-shaded.png">
+        <p class="image-description centered-text"> Donut of Doom circles its prey</p>
+    </div>
+</div>  
+
+<img class="media-25" src="resources/images/happening_media/combat-robotics/doom_v1/top_down.jpg">
+<img class="media-25" src="resources/images/happening_media/combat-robotics/doom_v1/weighing_in.jpg">
+<img class="media-25" src="resources/images/happening_media/combat-robotics/doom_v2/top_down.jpg">
+<img class="media-25" src="resources/images/happening_media/combat-robotics/doom_v2/pcb.jpg">
+
+<img class="media-33" src="resources/images/happening_media/combat-robotics/doom_v3/custom_casted_wheels.jpg">
+<img class="media-33" src="resources/images/happening_media/combat-robotics/doom_v3/on_fantik.jpg">
+<img class="media-33" src="resources/images/happening_media/combat-robotics/doom_v3/on_rumble_w.jpg">
+
+<img class="media-25" src="resources/images/happening_media/combat-robotics/doom_v4/above_side_view.jpg">
+<img class="media-25" src="resources/images/happening_media/combat-robotics/doom_v4/on_the_side_view.jpg">
+<img class="media-25" src="resources/images/happening_media/combat-robotics/doom_v4/most_destructive.jpg">
+<img class="media-25" src="resources/images/happening_media/combat-robotics/doom_v4/first_place_and_most_destructive.jpg">
+
+<iframe class="media-66" src="https://www.youtube.com/embed/kzNNyJmbasI" title="My first combat robot!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<iframe class="media-66" src="https://www.youtube.com/embed/ECPa3WXcjE0" title="all of Donut of Doom in one video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="crbbot">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> CRBBot </h2>
+                    <h3 class="subtle"> June 2026 - <span class="gold">PRESENT</span> </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/combatroboticsberkeley/CRBBot')"> Code </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/crbbot-shaded.png">
+        <p class="image-description centered-text"> A discord bot for CRB's discord server </p>
+    </div>
+</div>
+</div></details><details class="happening boxed-element" name="happenings" id="combat-robotics-learning-resources">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Combat Robotics Learning Resources </h2>
+                    <h3 class="subtle"> June 2026 - <span class="gold">PRESENT</span> </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://combatrobotics.studentorg.berkeley.edu/')"> CRB's Website </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/combat-robotics-learning-resources-shaded.png">
+        <p class="image-description centered-text"><a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1_4SjWBSmRzUF_1BycKUDimYtuERy-P9vDUuK26fJvfA/edit?slide=id.p#slide=id.p"> Worksession #1 </a></p>
+    </div>
+</div>
+</div></details><details class="happening boxed-element" name="happenings" id="cs61a">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> CS61A Resources </h2>
+                    <h3 class="subtle"> Aug 2026 - <span class="gold">PRESENT</span> </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://slipperee-code.github.io/61A')"> Resources! </button></div><div class="happening__content"><p>Click the button above for some CS61A resources!</p></div></details><details class="happening boxed-element" name="happenings" id="i-dont-node">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> I Don't Node </h2>
+                    <h3 class="subtle"> Mar 2026 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/lgarciasanchez5450/PGCE-Winter-Jam-2026')"> Code </button><button onclick="goToSite('https://hithere32123.itch.io/i-dont-node')"> itch.io Page </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/i-dont-node-shaded.png">
+        <p class="image-description centered-text"> We didn't know what to name the game. </p>
+    </div>
+</div>
+
+<iframe class="media-66" src="https://www.youtube.com/embed/s1tZiz4APLg" title="I Don't Node Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="physical-digital-darts">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Physical Digital Darts </h2>
+                    <h3 class="subtle"> Oct 2025 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/commonkestrel/physical-digital-darts')"> Code </button><button onclick="goToSite('https://devpost.com/software/digital-physical-darts-wii-darts')"> Devpost Submission </button><button onclick="goToSite('https://www.calhacks.io/')"> CalHacks' Website </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/physical-digital-darts-shaded.png">
+        <p class="image-description centered-text"> Me playing (physical digital) darts </p>
+    </div>
+</div>
+
+<img class="media-50" src="resources/images/happening_media/physical-digital-darts/meet_the_team.jpg">
+<iframe class="media-66" src="https://www.youtube.com/embed/d-0ktDKMHS8" title="Physical Digital Darts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="a-telescoping-phone-holder">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> A Telescoping Phone Holder </h2>
+                    <h3 class="subtle"> Nov 2025 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://devpost.com/software/a-telescoping-phone-holder')"> Devpost Submission </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/a-telescoping-phone-holder-shaded.png">
+        <p class="image-description centered-text"> A nice render by <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/yuxiangt/">Yuxiang Tian</a> </p>
+    </div>
+</div>
+
+<img class="media-33" src="resources/images/happening_media/a-telescoping-phone-holder/table_top_down.png">
+<img class="media-33" src="resources/images/happening_media/a-telescoping-phone-holder/alternative_use.png">
+<img class="media-33" src="resources/images/happening_media/a-telescoping-phone-holder/inner_workings.png">
+<iframe class="media-66" src="https://www.youtube.com/embed/iYU5oq1pbM0" title="A Telescoping Phone Holder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="zeroth-responder">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Zeroth Responder </h2>
+                    <h3 class="subtle"> Apr 2026 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://docs.google.com/presentation/d/1enS69dIbFPd3c31iNewE9B95djRrHfjgcJUzc1VxJbI/edit?usp=sharing')"> Design Document </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/zeroth-responder-shaded.png">
+        <p class="image-description centered-text"> A whimsical medicine delivery drone </p>
+    </div>
+</div>
+</div></details><details class="happening boxed-element" name="happenings" id="semicolon-john-denero">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Semicolon John DeNero </h2>
+                    <h3 class="subtle"> Dec 2025 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://gist.github.com/Slipperee-CODE/cb1315b9974dab26d84fd1be4c3dac38')"> Code Containing Semicolon John DeNero </button></div><div class="happening__content"><p> Here is Semicolon John DeNero Made Using Code Containing Semicolon John DeNero (reviewed by John DeNero himself): </p>
+<iframe class="media-66" src="https://www.youtube.com/embed/G3gi30so7uo?si=YV2s7-weU8Y4zUhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="integrordle">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Integrordle </h2>
+                    <h3 class="subtle"> May 2024 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/Slipperee-CODE/Integrordle')"> Code </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/integrordle-shaded.png">
+        <p class="image-description centered-text"> Integrals + Wordle = Integrordle </p>
+    </div>
+</div>
+
+<img class="media-33" src="resources/images/happening_media/integrordle/home_screen.png">
+<img class="media-33" src="resources/images/happening_media/integrordle/gameplay.png">
+<img class="media-33" src="resources/images/happening_media/integrordle/you_win.png">
+<iframe class="media-66" src="https://www.youtube.com/embed/6LaT6Y5QhGk" title="Integrordle Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="golfd">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Golf'd </h2>
+                    <h3 class="subtle"> Aug 2024 - July 2026 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/acarlson777/Golfd')"> Code </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/golfd-shaded.png">
+        <p class="image-description centered-text"> This is I. Ron </p>
+    </div>
+</div>
+
+<p> Here is some Golf'd gameplay: </p>
+<iframe class="media-66" src="https://www.youtube.com/embed/jaElgNO0eSw" title="Golf'd Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="somni">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Somni </h2>
+                    <h3 class="subtle"> Aug 2023 - Aug 2024 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/acarlson777/Somnia2024')"> Code </button><button onclick="goToSite('https://apps.apple.com/us/app/somn%C3%AF/id6474272770')"> iOS App Store </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/somni-shaded.png">
+        <p class="image-description centered-text"> The start of Somni </p>
+    </div>
+</div>
+
+<img class="media-33" src="resources/images/happening_media/somni/home_screen.png">
+<img class="media-33" src="resources/images/happening_media/somni/beas_room.png">
+<img class="media-33" src="resources/images/happening_media/somni/woebegones_castle.png">
+<iframe class="media-66" src="https://www.youtube.com/embed/UGOWv1u7IPg" title="Somni Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="doodle-dogs">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Doodle Dogs </h2>
+                    <h3 class="subtle"> Aug 2022 - Aug 2023 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/LarryHellen/DoodleDogs')"> Code </button><button onclick="goToSite('https://apps.apple.com/us/app/doodledogs/id6443924814')"> iOS App Store </button><button onclick="goToSite('https://www.congressionalappchallenge.us/23-ca31/')"> Congressional App Challenge </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/doodle-dogs-shaded.png">
+        <p class="image-description centered-text"> The start of Doodle Dogs </p>
+    </div>
+</div>
+
+<img class="media-25" src="resources/images/happening_media/doodle-dogs/at_dc.jpg">
+<img class="media-25" src="resources/images/happening_media/doodle-dogs/at_school.jpg">
+<img class="media-25" src="resources/images/happening_media/doodle-dogs/home_screen.png">
+<img class="media-25" src="resources/images/happening_media/doodle-dogs/match3.png">
+<iframe class="media-66" src="https://www.youtube.com/embed/tYIy_JixiaY" title="DoodleDogs Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="ftc">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> First Tech Challenge </h2>
+                    <h3 class="subtle"> Aug 2018 - July 2025 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/Slipperee-CODE/4625-FTC-IntoTheDeep')"> Code </button><button onclick="goToSite('https://ftcscout.org/teams/4625?season=2024')"> FTC Scout </button><button onclick="goToSite('https://www.firstinspires.org/programs/ftc/')"> FTC's Website </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/ftc-shaded.png">
+        <p class="image-description centered-text"> Me in a wizard costume with a dremel </p>
+    </div>
+</div>
+
+<img class="media-33" src="resources/images/happening_media/ftc/cs_preparations.jpg">
+<img class="media-33" src="resources/images/happening_media/ftc/itd_explaining.png">
+<img class="media-33" src="resources/images/happening_media/ftc/itd_high_bucket.png">
+<iframe class="media-66" src="https://www.youtube.com/embed/SvKcJEX8I6s" title="ITD | The turret is working!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<iframe class="media-66" src="https://www.youtube.com/embed/XeBT7npoFsI" title="ITD | Autonomous is working!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="mr-monrovia">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Mr. Monrovia </h2>
+                    <h3 class="subtle"> Apr 2025 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://www.youtube.com/watch?v=kLS_c7PtbTs&amp;list=PL7FUgfqI9U4wRM_m0vOH-_gBd_87ZLRQG')"> Educational Parody Songs That I Have Made </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/mr-monrovia-shaded.png">
+        <p class="image-description centered-text"> Me singing u-sub to my school </p>
+    </div>
+</div>
+
+<iframe class="media-66" src="https://www.youtube.com/embed/2KnW_x_VdXk" title="Singing &quot;All I Want This Calc Test is U&quot; in Front of My School" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="masa-robot-arm">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> A Human Arm Controlled Robot Arm </h2>
+                    <h3 class="subtle"> May 2024 </h3>
+                </summary>
+                
+                <div class="important-links">
+                <button onclick="goToSite('https://github.com/Slipperee-CODE/ArmControlledTurret')"> Code </button></div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/masa-robot-arm-shaded.png">
+        <p class="image-description centered-text"> Preparing the arm </p>
+    </div>
+</div>
+
+<iframe class="media-66" src="https://www.youtube.com/embed/O9qLW1J7ptc" title="A Human Arm Controlled Robot Arm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="headphone-hangers">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Headphone Hangers </h2>
+                    <h3 class="subtle"> April 2025 - July 2025 </h3>
+                </summary>
+                
+                <div class="important-links">
+                </div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/headphone-hangers-shaded.png">
+        <p class="image-description centered-text"> 2 headphone hanger designs I made</p>
+    </div>
+</div>
+
+<img class="media-25" src="resources/images/happening_media/headphone-hangers/carlson_back.jpg">
+<img class="media-25" src="resources/images/happening_media/headphone-hangers/carlson_front.jpg">
+<img class="media-25" src="resources/images/happening_media/headphone-hangers/carlson_cad.png">
+<img class="media-25" src="resources/images/happening_media/headphone-hangers/dobson_side.jpg">
+</div></details><details class="happening boxed-element" name="happenings" id="big-keyboard-keys">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Big Keyboard Keys </h2>
+                    <h3 class="subtle"> Apr 2025 </h3>
+                </summary>
+                
+                <div class="important-links">
+                </div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/big-keyboard-keys-shaded.png">
+        <p class="image-description centered-text"> A big W key</p>
+    </div>
+</div>
+
+<img class="media-50" src="resources/images/happening_media/big-keyboard-keys/keyswitch.png">
+<iframe class="media-66" src="https://www.youtube.com/embed/FrtRZbo3Hus" title="Big Keyboard Keys #1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<iframe class="media-66" src="https://www.youtube.com/embed/44dwHWgMtaQ" title="Big Keyboard Keys #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div></details><details class="happening boxed-element" name="happenings" id="big-cookie-cutters">
+                <summary class="happening__summary">
+                    <h2 class="happening__title"> Big Cookie Cutters </h2>
+                    <h3 class="subtle"> Sep 2024 - Oct 2024 </h3>
+                </summary>
+                
+                <div class="important-links">
+                </div><div class="happening__content"><div class="centered-flex-row with-gap">
+    <div class="media-66">
+        <p> Hi there, I'm still working on the description for this experience! In the meantime, feel free to enjoy these pictures and to email me at <a target="_blank" rel="noopener noreferrer">scheidlercai@gmail.com</a> to learn more about this experience! </p>
+    </div>
+    <div class="media-33 centered-flex-column with-gap">
+        <img class="media-100" src="resources/images/happening_icons/shaded/big-cookie-cutters-shaded.png">
+        <p class="image-description centered-text"> A big cookie </p>
+    </div>
+</div>
+
+<img class="media-50" src="resources/images/happening_media/big-cookie-cutters/cookie_cuttters.png">
+</div></details></div>
 
     <br>
     <br>
@@ -83,106 +700,4 @@
         }
     </script>
 
-    <script>
-        const DEFAULT_DESCRIPTION = "<p>Hi there, I'm still working on the description for this section! In the meantime, feel free to enjoy these pictures and to email me at <a>scheidlercai@gmail.com</a> to learn more about this section!</p>"
-        function createHappeningBuilder(gallery, section) {
-            return async function createHappening(happening_id) {
-                const happening_json = await fetch(`./resources/json/happenings/${happening_id}.json`)
-                    .then(response => response.json());
-                    
-                const happening_thumbnail = document.createElement('div');
-                happening_thumbnail.classList.add("happening-thumbnail");
-                happening_thumbnail.innerHTML = 
-                `
-                <h2 class="happening-thumbnail__title"> ${happening_json.title} </h2>
-                <img onclick="goToSection('#${happening_id}')" src="${happening_json.src}">     
-                `;
-                gallery.appendChild(happening_thumbnail);
-
-                const happening_entry = document.createElement('details');
-                happening_entry.classList.add("happening");
-                happening_entry.classList.add("boxed-element");
-                happening_entry.name = "happenings";
-                happening_entry.id = happening_id;
-                let happening_entry_innerHTML = 
-                `
-                <summary class="happening__summary">
-                    <h2 class="happening__title"> ${happening_json.title} </h2>
-                    <h3 class="subtle"> ${happening_json.occurred} </h3>
-                </summary>
-                
-                <div class="important-links">
-                `;
-                for (const [link_name, link] of Object.entries(happening_json.links)) {
-                    happening_entry_innerHTML += `<button onclick="goToSite('${link}')"> ${link_name} </button>`;
-                }
-                happening_entry_innerHTML += "</div>";
-
-                happening_entry_innerHTML += '<div class="happening__content">';
-                const happening_html = await fetch(`./resources/html/happenings/${happening_json.content}.html`)
-                    .then(response => response.text()); 
-                happening_entry_innerHTML += happening_html;
-                happening_entry_innerHTML += "</div>";
-                happening_entry.innerHTML = happening_entry_innerHTML;
-                section.appendChild(happening_entry);
-            }
-        }
-
-        let experience_list = [
-            "stem-tutoring",
-            "wec-and-weg", 
-            "caee",
-            "thecoderschool",
-            "venture-valley",
-        ];
-
-        const project_list = [
-            "combat-robotics",
-            "crbbot",  
-            "combat-robotics-learning-resources",
-            "cs61a",
-            "i-dont-node",
-            "physical-digital-darts", 
-            "a-telescoping-phone-holder",
-            "zeroth-responder",
-            "semicolon-john-denero",
-            "integrordle",
-            "golfd",
-            "somni",
-            "doodle-dogs",
-            "ftc",
-            "mr-monrovia",
-            "masa-robot-arm",
-            "headphone-hangers",
-            "big-keyboard-keys",
-            "big-cookie-cutters"
-        ];
-
-        const experience_gallery = document.getElementById("experience-gallery");
-        const experience = document.getElementById("experience");
-
-        const project_gallery = document.getElementById("project-gallery");
-        const projects = document.getElementById("projects");
-
-        async function populatePage() {
-            const experience_builder = createHappeningBuilder(experience_gallery, experience);
-            for (e of experience_list) { 
-                await experience_builder(e);
-            }
-
-            const project_builder = createHappeningBuilder(project_gallery, projects);
-            for (p of project_list) { 
-                await project_builder(p);
-            }
-        }
-        populatePage().then(() => {
-            const galleries = document.getElementsByClassName("gallery");
-            for (const g of galleries) {
-                for (const c of [...g.children]) {
-                    g.appendChild(c.cloneNode(true));
-                }
-            }
-        })
-    </script>
-</body>
-</html>
+</body></html>
